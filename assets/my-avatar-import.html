@@ -1,0 +1,51 @@
+<template id="my-avatar-import-tmpl">
+  <style>
+    .container { background-color: red; color: white; display: inline-block; }
+    .float-right { width: 130px; float: right; }
+    #avatar { float: left; }
+    #username { font-size: 18px; float: right; clear: right; }
+    #service { font-size: 14px; float: right; clear: right; }
+  </style>
+  <div class="container">
+    <img id="avatar" />
+    <span id="username"></span>
+    <span id="service"></span>
+  </div>
+</template>
+
+<script>
+( function( currentScript ) {
+  var importDoc = currentScript.ownerDocument;
+
+  var MyAvatarImportPrototype = Object.create(HTMLElement.prototype);
+
+  MyAvatarImportPrototype.updateEl = function() {
+    var username = this.getAttribute('username'),
+    service = this.getAttribute('service'),
+    url = 'http://avatars.io/' + service + '/' + username;
+
+    this.shadow.querySelector( '#avatar' ).setAttribute( 'src', url );
+    this.shadow.querySelector( '#username' ).textContent = username;
+    this.shadow.querySelector( '#service' ).textContent = service;
+  };
+
+  MyAvatarImportPrototype.createdCallback = function() {
+    var content = importDoc.querySelector( '#my-avatar-import-tmpl' ).content;
+    var clone = importDoc.importNode( content, true );
+
+    this.shadow = this.createShadowRoot();
+    this.shadow.appendChild( clone );
+
+    this.updateEl();
+  };
+
+  MyAvatarImportPrototype.attributeChangedCallback = function() {
+    this.updateEl();
+  }
+
+  document.registerElement('my-avatar-import', {
+    prototype: MyAvatarImportPrototype
+  });
+
+})( document.currentScript );
+</script>

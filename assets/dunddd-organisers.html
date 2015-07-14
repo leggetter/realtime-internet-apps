@@ -1,0 +1,35 @@
+<link rel="import" href="my-avatar-import.html" />
+
+<template id="dunddd-organisers-tmpl">
+  <style>
+    my-avatar-import {
+      margin: 5px;
+    }
+  </style>
+
+  <my-avatar-import service="twitter" username="argibson"></my-avatar-import>
+  <my-avatar-import service="twitter" username="CAMMURPHY"></my-avatar-import>
+  <my-avatar-import service="twitter" username="colinmackay"></my-avatar-import>
+  <my-avatar-import service="twitter" username="andycobley"></my-avatar-import>
+</template>
+
+<script>
+( function( currentScript ) {
+
+  var importDoc = currentScript.ownerDocument;
+
+  var DunDDDOrganisersPrototype = Object.create(HTMLElement.prototype);
+
+  DunDDDOrganisersPrototype.createdCallback = function() {
+    var content = importDoc.querySelector( '#dunddd-organisers-tmpl' ).content;
+    var clone = importDoc.importNode( content, true );
+    this.shadow = this.createShadowRoot();
+    this.shadow.appendChild( clone );
+  };
+
+  document.registerElement('dunddd-organisers', {
+    prototype: DunDDDOrganisersPrototype
+  });
+
+} )( document._currentScript || document.currentScript );
+</script>

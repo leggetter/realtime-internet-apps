@@ -1,0 +1,42 @@
+<!-- TODO: work out why this isn't registering itself as an element -->
+
+<link rel="stylesheet" href="./animate.css" />
+
+<template id="custom-event-tmpl">
+  <style>
+    img {
+      width: 100px;
+    }
+  </style>
+  <img src="../img/smile.png" />
+</template>
+
+<script>
+( function( currentScript ) {
+  var importDoc = currentScript.ownerDocument;
+  
+  var CustomEventPrototype = Object.create(HTMLElement.prototype);
+
+  CustomEventPrototype.createdCallback = function() {
+debugger;    
+    var content = importDoc.querySelector( '#custom-event-tmpl' ).content;
+
+    this.shadow = this.createShadowRoot();
+    this.shadow.appendChild( importDoc.importNode( content, true ) );
+    
+    var img = this.shadow.querySelector('img');
+    
+    this.addEventListener('click', function() {
+      img.classList.toggle('animated');
+      img.classList.toggle('rubberBand');
+      var customEvent = new CustomEvent('cheese');
+      this.dispatchEvent(customEvent);
+    }.bind(this));
+  };
+
+  document.registerElement('custom-event-ex', {
+    prototype: CustomEventPrototype
+  });
+  
+} )( document._currentScript || document.currentScript );
+<script>

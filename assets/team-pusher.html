@@ -1,0 +1,43 @@
+<link rel="import" href="my-avatar-import.html" />
+
+<template id="team-pusher-tmpl">
+  <style>
+    my-avatar-import {
+      margin: 5px;
+    }
+  </style>
+
+  <my-avatar-import service="twitter" username="maxthelion"></my-avatar-import>
+  <my-avatar-import service="twitter" username="copypastaa"></my-avatar-import>
+  <my-avatar-import service="twitter" username="zimbatm"></my-avatar-import>
+  <my-avatar-import service="twitter" username="loicdumas"></my-avatar-import>
+  <my-avatar-import service="twitter" username="mdpye"></my-avatar-import>
+  <my-avatar-import service="twitter" username="olga_dukova"></my-avatar-import>
+  <my-avatar-import service="twitter" username="pawel_ledwon"></my-avatar-import>
+  <my-avatar-import service="twitter" username="hamchapman"></my-avatar-import>
+  <my-avatar-import service="twitter" username="rumblesan"></my-avatar-import>
+  <my-avatar-import service="twitter" username="jamessiddle"></my-avatar-import>
+  <my-avatar-import service="twitter" username="willsewell_"></my-avatar-import>
+  <my-avatar-import service="twitter" username="leggetter"></my-avatar-import>
+</template>
+
+<script>
+( function( currentScript ) {
+
+  var importDoc = currentScript.ownerDocument;
+
+  var TeamPusherPrototype = Object.create(HTMLElement.prototype);
+
+  TeamPusherPrototype.createdCallback = function() {
+    var content = importDoc.querySelector( '#team-pusher-tmpl' ).content;
+    var clone = importDoc.importNode( content, true );
+    this.shadow = this.createShadowRoot();
+    this.shadow.appendChild( clone );
+  };
+
+  document.registerElement('team-pusher', {
+    prototype: TeamPusherPrototype
+  });
+
+} )( document._currentScript || document.currentScript );
+</script>

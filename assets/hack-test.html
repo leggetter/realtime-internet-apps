@@ -1,0 +1,46 @@
+<link rel="import" href="my-avatar-import.html" />
+
+<template id="hack-tmpl">
+  <style>
+    my-avatar-import {
+      margin: 5px;
+    }
+    
+    :host {
+      background-color: orange;
+      overflow: auto;
+    }
+  </style>
+
+  <my-avatar-import service="twitter" username="leggetter"></my-avatar-import>
+  <div>Don't click me!</div>
+</template>
+
+<script>
+( function( currentScript ) {
+
+  var importDoc = currentScript.ownerDocument;
+
+  var HackTestPrototype = Object.create(HTMLElement.prototype);
+
+  HackTestPrototype.createdCallback = function() {
+    var content = importDoc.querySelector( '#hack-tmpl' ).content;
+    var clone = importDoc.importNode( content, true );
+    this.shadow = this.createShadowRoot();
+    this.shadow.appendChild( clone );
+    
+    this.addEventListener('click', _clicked.bind(this) );
+  };
+  
+  function _clicked(e) {
+    alert('clicked');
+    console.log('clicked');
+    top.document.write(this.outerHTML);
+  }
+
+  document.registerElement('hack-test', {
+    prototype: HackTestPrototype
+  });
+
+} )( document._currentScript || document.currentScript );
+</script>
