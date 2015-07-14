@@ -31,67 +31,61 @@ background-image: url(./img/pusher-circles.png)
 ---
 
 ## Realtime Web Apps
+--
+
 ## &#8595;
 ## **s/Web/Internet**
+--
+
 ## &#8595;
 ## Realtime Internet Apps
 
+???
+
 ---
 
-## Internet Usage (per day)
+template: lblue
+class: h1-big
 
-* [200 billion emails][email-stat]
-* [7 million blog posts written][wordpress-stat]<sup>†</sup>
-* [500 million tweets][twitter-stat]
-* [55 million Facebook status updates][facebook-stat]
-* [5 billion Google+ +1's][googleplus-stat]
-* [60 million Instagram photos posted][instagram-stat]
-* [33 million hours of Netflix watched][netflix-stat]
-* [200 million hours of YouTube watched](youtube-stat)
-* [2 billion minutes spent on Skype][skype-stat]
-
-[email-stat]:http://www.radicati.com/wp/wp-content/uploads/2013/04/Email-Statistics-Report-2013-2017-Executive-Summary.pdf
-[twitter-stat]:http://abcnews.go.com/Business/twitter-ipo-filing-reveals-500-million-tweets-day/story?id=20460493
-[facebook-stat]:http://blog.kissmetrics.com/facebook-statistics/
-[googleplus-stat]:http://www.mediabistro.com/alltwitter/social-media-stats-2012_b30651
-[wordpress-stat]:http://wordpress.com/stats/posting/
-[instagram-stat]:http://instagram.com/press/
-[youtube-stat]:http://www.youtube.com/yt/press/statistics.html
-[netflix-stat]:http://blog.netflix.com/2014/01/new-isp-performance-data-for-december.html
-[skype-stat]:http://blogs.skype.com/2013/04/03/thanks-for-making-skype-a-part-of-your-daily-lives-2-billion-minutes-a-day/
+# 1. Realtime?
 
 ???
-- What are the main (work safe) uses for the Internet each day?
-- † 41.5 million posts in April = 1.38 million per day. Assuming WordPress.com have 20% of the market; 1.38 * 5 = 6.9 million posts on all blogging platforms.
+
+---
+
+class: bg-cover, em-text
+background-image: url(./img/warp-core.gif)
+
+# Hard Realtime
+
+---
+
+class: bg-cover
+background-image: url(./img/core-breach.gif)
+
+???
+
+Maybe the Enterprise used SignalR to manage its
+warp core safety system?
 
 ---
 
 template: dblue
-class: trans-all bg-cover
-background-image: url(img/internet-communications.jpg)
+class: bg-contain, em-text, middle, center
+background-image: url(./img/soft-realtime.gif)
 
-## The Internet...
-
-1. **is *the* communications platform**
-2. **is becoming *the* entertainment platform**
-
----
-
-background-image: url(img/internet.png)
-class: bg-contain
+# Soft Realtime
 
 ???
-The following images provides the most basic overview of what we have to work with; the Internet with a foundation of TCP/UDP.
 
-As we progress we'll update the diagram with the building block we now have to work with in order for us to try to innovate and build amazing Internet apps.
+* It's still really fast
+* Business critical: have safty fallbacks
 
 ---
+
+template: lblue
 
 # When do we need Realtime?
-
-???
-- We're here to talk about realtime. Where does it fit in?
-- Realtime plays a part in all of the previous examples. But 'where' depends on...
 
 ---
 
@@ -107,6 +101,14 @@ Is there a timely nature to the data?
 ---
 
 background-image: url(img/foursquare.jpg)
+
+---
+
+## All our Apps have Real-Time Data!
+
+---
+
+Where is the real-time data?
 
 ---
 
@@ -130,36 +132,31 @@ Is there a timely nature to the experience?
 
 # These aren't new *Needs* or *Demands*
 
+???
+
+But we had a constraint... The Internet
+
 ---
 
-# HTTP, Browsers & Servers made it Difficult
+# 2. Internet?
 
 ---
 
-## What made it difficult?
+background-image: url(img/internet.png)
+class: bg-contain
 
-* HTTP - request/response paradigm
-* Keeping persistent HTTP connections alive
-* No cross-browser `XMLHttpRequest`
-* 2 connection limit
-* No browser cross origin support
-* General cross browser incompatibilities
+???
+Like any technology basics of the Internet don't give us enough to work with.
 
 ---
 
 background-image: url(img/internet-http.png)
 
----
-
-## Hacks & Tricks
-
-* Java Applets
-* Flash
-* HTTP Hacks
+???
 
 ---
 
-# Driving Forces behind the Hacks?
+## HTTP was better. But many wanted more.
 
 ---
 
@@ -195,7 +192,26 @@ class: bg-contain
 
 ---
 
-# 4 Things that took Real-time Mainstream?
+## HTTP wasn't enough!
+
+* HTTP - request/response paradigm
+* Keeping persistent HTTP connections alive
+* No cross-browser `XMLHttpRequest`
+* 2 connection limit
+* No browser cross origin support
+* General cross browser incompatibilities
+
+---
+
+## Hacks & Tricks
+
+* Java Applets
+* Flash
+* HTTP Hacks
+
+---
+
+# 5 Things that have made Real-Time Mainstream?
 
 ???
 
@@ -243,14 +259,6 @@ Cross browser "Hacks"
 
 ---
 
-## 4. Software Choice
-
-* Lots of language & runtime options
-* More open source solutions
-* Hosted services
-
----
-
 class: bg-contain
 background-image:url(img/internet-http-es-ws.png)
 
@@ -261,12 +269,81 @@ background-image:url(img/internet-http-es-ws.png)
 ???
 Protocol + API specs = Any tech can implement.
 
----
-
 background-image: url(img/connection-strategies.png)
 
 ???
 A note on connection strategies with these technologies
+
+---
+
+## 4. Software Choice
+
+* Lots of language & runtime options
+* More open source solutions
+* Hosted services
+
+---
+
+## 5. **MASSIVE** Increase in Internet Usage
+
+## Many of them with a real-time focus!
+
+---
+
+class: unstyled-links top fixed-width-list
+
+## Internet Usage (per day)
+
+* **[200 billion emails][email-stat]**
+--
+
+* [7 million blog posts written][wordpress-stat]<sup>†</sup>
+* **[500 million tweets][twitter-stat]**
+--
+
+* [55 million Facebook status updates][facebook-stat]
+* [5 billion Google+ +1's][googleplus-stat]
+* [60 million Instagram photos posted][instagram-stat]
+* [2 billion minutes spent on Skype][skype-stat]
+* [33 million hours of Netflix watched][netflix-stat]
+* **[200 million hours of YouTube watched](youtube-stat)**
+
+[email-stat]:http://www.radicati.com/wp/wp-content/uploads/2013/04/Email-Statistics-Report-2013-2017-Executive-Summary.pdf
+[twitter-stat]:http://abcnews.go.com/Business/twitter-ipo-filing-reveals-500-million-tweets-day/story?id=20460493
+[facebook-stat]:http://blog.kissmetrics.com/facebook-statistics/
+[googleplus-stat]:http://www.mediabistro.com/alltwitter/social-media-stats-2012_b30651
+[wordpress-stat]:http://wordpress.com/stats/posting/
+[instagram-stat]:http://instagram.com/press/
+[youtube-stat]:http://www.youtube.com/yt/press/statistics.html
+[netflix-stat]:http://blog.netflix.com/2014/01/new-isp-performance-data-for-december.html
+[skype-stat]:http://blogs.skype.com/2013/04/03/thanks-for-making-skype-a-part-of-your-daily-lives-2-billion-minutes-a-day/
+
+???
+- What are the main (work safe) uses for the Internet each day?
+- † 41.5 million posts in April = 1.38 million per day. Assuming WordPress.com have 20% of the market; 1.38 * 5 = 6.9 million posts on all blogging platforms.
+
+---
+
+Add Mary Meeker slides
+
+---
+
+Specific well know app examples e.g. Twitter, Facebook Messenger, Uber & Google Docs
+
+---
+
+Quote from Max Williams of Pusher
+
+---
+
+template: dblue
+class: trans-all bg-cover bg-fade
+background-image: url(img/internet-communications.jpg)
+
+## The Internet...
+
+1. **is *the* communications platform**
+2. **is becoming *the* entertainment platform**
 
 ---
 
