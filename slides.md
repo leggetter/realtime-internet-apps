@@ -47,7 +47,7 @@ background-image: url(./img/pusher-circles.png)
 template: lblue
 class: h1-big
 
-# 1. Realtime?
+# Realtime
 
 ???
 
@@ -100,15 +100,20 @@ Is there a timely nature to the data?
 
 ---
 
-background-image: url(img/foursquare.jpg)
+<!-- background-image: url(img/excited-data.gif) -->
+<!-- class: em-text -->
 
----
+## You Have Real-Time Data
 
-## All our Apps have Real-Time Data!
+### Events == Real-Time Data
 
----
+* Data Changes
+* System Interactions
+* User Interactions
 
-Where is the real-time data?
+???
+
+The real-time web is sometimes referred to as the "Evented Web"
 
 ---
 
@@ -126,11 +131,13 @@ Is there a timely nature to the experience?
 ## Realtime is required when there's a *Need* or *Demand* for:
 
 * Up to date information
-* Interaction to maintain engagement
+* Interaction to maintain engagement (UX)
 
 ---
 
 # These aren't new *Needs* or *Demands*
+
+## But...
 
 ???
 
@@ -138,7 +145,7 @@ But we had a constraint... The Internet
 
 ---
 
-# 2. Internet?
+# Internet
 
 ---
 
@@ -336,13 +343,20 @@ Quote from Max Williams of Pusher
 
 ---
 
+# Real-Time is Essential because...
+
+---
+
 template: dblue
-class: trans-all bg-cover bg-fade
+class: trans-all bg-cover bg-fade top fixed-width-list
 background-image: url(img/internet-communications.jpg)
 
 ## The Internet...
+--
 
 1. **is *the* communications platform**
+--
+
 2. **is becoming *the* entertainment platform**
 
 ---
@@ -356,15 +370,16 @@ This is software - these are my opinions. You can achieve similar things in diff
 
 ---
 
+class: top trans-h
+background-image: url(./img/itv-news-may-2014.png)
+
 # Notifications & Signalling
 
 ---
 
-background-image: url(./img/itv-news-may-2014.png)
+class: full-video top trans-h
 
----
-
-## Internet ^5 Machine
+<h1 style="position: relative; z-index: 1000000;">Internet ^5 Machine</h1>
 
 <video  poster="./video/internet-high-5-machine.png" width="90%" preload="none" controls>
   <!-- .element: class="fragment fade-in" data-fragment-index="1" -->
@@ -378,7 +393,9 @@ Russell Thomas and Syd Lawrence
 
 ---
 
-background-image: url(./img/talkyio-laptop.png)
+class: trans-h h-non-block
+
+background-image: url(./img/talky-io.png)
 
 ## talky.io
 
@@ -391,46 +408,45 @@ background-image: url(./img/talkyio-laptop.png)
 **Receive message**
 
 ```js
-var sock = new SockJS( 'http://localhost:9999/sockjs' );
-
-sock.onmessage = function( e ) {
-  console.log( 'message', e.data );
-};
+var socket = new eio.Socket('ws://localhost/');
+socket.on('open', function(){
+  socket.on('message', function(data){
+    console.log(data);
+  });
+});
 ```
 
 **Send Message**
 
 ```js
-var http = require('http');
-    sockjs = require('sockjs');
+var engine = require('engine.io');
+var server = engine.listen(80);
 
-var hello = sockjs.createServer();
-hello.on( 'connection' , function( conn ) {
-  conn.write( 'hello SockJS' );
-} );
-
-var server = http.createServer();
-hello.installHandlers( server, { prefix:'/sockjs' } );
-server.listen( 9999, '0.0.0.0' );
+server.on('connection', function(socket){
+  socket.send('utf 8 string');
+  socket.send(new Buffer([0, 1, 2, 3, 4, 5])); // binary data
+})
 ```
 
 ---
 
 ## Simple Messaging Solutions
 
-* Server/Server
-  * WebHooks
-* Client/Server
-  * WebSocket-only or HTTP-only solutions
+.col-3rd[* Server/Server
+  * WebHooks]
+  
+.col-3rd[* Client/Server
   * [SockJS](https://github.com/sockjs)
   * [Engine.IO](https://github.com/automattic/engine.io)
-  * [Primus](https://github.com/primus/primus)
-* Peer-to-Peer
+  * [Primus](https://github.com/primus/primus)]
+  
+.col-3rd[* Peer-to-Peer
   * [simpleWebRTC](http://simplewebrtc.com/)
-  * [PeerJS](http://peerjs.com/)
+  * [PeerJS](http://peerjs.com/)]
 
 ???
-For client/server you generally need a higher abstraction.
+* Not too many to choose from
+* For client/server you generally need a higher abstraction.
 
 ---
 
@@ -438,7 +454,7 @@ background-image: url(./img/internet-http-es-ws-msg.png)
 
 ---
 
-# Lots of Data
+# Complex Data
 
 ---
 
@@ -472,30 +488,56 @@ background-image: url(./img/mancity-match-day-centre-pubsub.png)
 
 ---
 
+class: long
+
+## PubSub
+
+**Subscribe**
+
+```js
+var client = new Faye.Client('http://localhost:8000/');
+
+client.subscribe('/messages', function(message) {
+  alert('Got a message: ' + message.text);
+});
+```
+
+**Publish**
+
+```js
+client.publish('/messages', {text: 'Hello world'});
+```
+
+---
+
+class: long
+
+## Evented PubSub
+
 **Subscribe**
 
 ```js
 var pusher = new Pusher( APP_KEY );
-var channel = pusher.subscribe( 'game-overview' );
+var channel = pusher.subscribe( 'messages' );
 
-channel.bind( 'goal_scored', function( data ) {
+channel.bind( 'new_message', function( data ) {
   // Handle Update
 } );
 
-channel.bind( 'time_updated', function( data ) {
+channel.bind( 'message_updated', function( data ) {
 } );
 ```
 
 **Publish**
 
 ```js
-var pusher = new Pusher( APP_KEY );
-
-var data = { team_id = 'manchester_city',
-             goals_scored: 2,
-             goal_scorer: 'Sergio Agüero' };
-pusher.trigger( 'game-overview', 'goal_scored', data );
+var data = {text: 'Hello world'};
+pusher.trigger( 'messages', 'new_message', data );
 ```
+
+???
+In many ways Socket.IO is also an evented PubSub solution.
+With events first and then also offering namespaces and rooms.
 
 ---
 
@@ -503,18 +545,20 @@ pusher.trigger( 'game-overview', 'goal_scored', data );
 
 .left[
 * Self Hosted
-  * [Socket.IO](http://socket.io)
+  * [Socket.IO](http://socket.io) <sup>†</sup>
   * [Faye](http://faye.jcoglan.com)
-  * [XSockets](http://xsockets.net)
+  * [XSockets](http://xsockets.net) <sup>†</sup>
 ]
 
 .right[
 * Hosted
   * [Hydna](http://hydna.com)
   * [PubNub](http://pubnub.com)
-  * [Pusher](http://pusher.com)
+  * [Pusher](http://pusher.com) <sup>†</sup>
   * [Realtime.co](http://realtime.co)
 ]
+
+<small style="position: absolute; bottom: 5%;">† Evented PubSub solutions</small>
 
 ---
 
@@ -584,12 +628,15 @@ game.server.move( me, x, y );
 
 ## RMI Solutions
 
-* Self Hosted:
-  * [dNode](https://github.com/substack/dnode)
-  * [SignalR](http://www.asp.net/signalr)
+.left[* Self Hosted:
+  * [dNode](https://github.com/substack/dnode) <small>(Node, PHP, Java, Ruby, Perl)</small>
+  * [eureca.io](https://github.com/Ezelia/eureca.io) <small>(Node)</small>
   * [Java.rmi](http://docs.oracle.com/javase/7/docs/api/java/rmi/package-summary.html)
-* Hosted:
-  * *SignalR on Windows Azure?*
+  * [Meteor](https://www.meteor.com/) <small>(Node)</small>
+  * [SignalR](http://www.asp.net/signalr) <small>(.NET)</small>
+  * [XSockets](http://xsockets.net) <small>(.NET)</small>]
+.right[* Hosted:
+  * *SignalR on Windows Azure?*]
 
 ---
 
@@ -614,7 +661,9 @@ background-image: url(./img/collaborative-mapping.png)
 
 ---
 
-## Physical Collaborative Mapping
+class: bottom trans-h full-video
+
+<h1 style="position: relative; z-index: 1000000;">Physical Collaborative Mapping</h1>
 
 <video  poster="./video/physical-collaborative-mapping.png" width="90%" preload="none" controls>
   <source src="./video/640/physical-collaborative-mapping-640.mp4" type="video/mp4">
@@ -652,17 +701,25 @@ myDataRef.on( 'child_removed', function(snapshot) {
 
 .left[
 * Self Hosted:
+  * [CouchDB](http://couchdb.apache.org/) + [pouchdb](http://pouchdb.com/)
   * [DerbyJS](http://derbyjs.com/)
+  * [LowlaDB](https://github.com/lowla)
   * [Meteor](http://meteor.com)
-  * [CouchDB]() + [pouchdb](http://pouchdb.com/)
+  * [ShareJS](https://github.com/share/ShareJS)
 ]
-.right[
-* Hosted:
+.right[* Hosted:
   * [Firebase](http://firebase.com)
+  * [Flybase](http://flybase.io/)
   * [Google Drive Realtime API](https://developers.google.com/drive/realtime/)
   * [Realtime.co](http://realtime.co)
   * [Simperium](http://simperium.com)
+  * [Syncano](http://syncano.com)
 ]
+
+???
+
+* Some are a bit more "all-in" than others
+* e.g. Meteor & Derby offer templating
 
 ---
 
@@ -673,11 +730,36 @@ It's now so much easier to innovate!
 
 ---
 
-# How do you choose a solution?
+class: top
+
+## How do you choose a solution?
+
+--
+
+### Watch my videos :)
+
+<a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="40%" style="float: left; margin-left: 5%;" /></a>
+
+<a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="40%" style="float:right; margin-right: 5%;" /></a>
 
 ---
 
+class: bottom-left-h trans-all bg-right
+background-image: url(./img/connection-strategies.png)
+background-position: right
+
+### Connection Strategy
+
+???
+
+You've got to be able to establish a connection.
+
+---
+
+class: bottom-left-h trans-all
 background-image: url(./img/rtw-tech-decision-matrix-white.png)
+
+### Communication Pattern
 
 ---
 

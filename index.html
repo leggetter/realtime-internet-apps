@@ -84,8 +84,39 @@
         background-blend-mode: soft-light;
       }
       
-      .fixed-width-list ul {
+      .fixed-width-list ul,
+      .fixed-width-list ol {
         width: 650px;
+      }
+      
+      .bottom-left-h h1,
+      .bottom-left-h h2,
+      .bottom-left-h h3 {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        overflow: auto;
+      }
+      
+      .bg-right {
+        background-position: right !important;
+      }
+      
+      .full-video video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      
+      .h-non-block h1,
+      .h-non-block h2 {
+        display: inline-block;
+      }
+      
+      .col-3rd {
+        width: 30%;
+        float: left;
       }
     </style>
   </head>
