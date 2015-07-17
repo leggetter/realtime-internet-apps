@@ -19,6 +19,7 @@ class: title
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Evangelism</span>
 * <span class="speaker-pusher-logo"></span>
+* [pusher.com](https://pusher.com)
 
 ???
 
@@ -27,6 +28,13 @@ class: title
 template: dblue
 class: bg-contain, pusher-circle
 background-image: url(./img/pusher-circles.png)
+
+---
+
+<a href="https://www.youtube.com/watch?v=E2GhY9NaDkQ">
+  <img src="./img/2014-and-beyond.png"
+       style="position: absolute; top: 0; left: 0; width: 100%;" />
+</a>
 
 ---
 
@@ -41,6 +49,9 @@ background-image: url(./img/pusher-circles.png)
 ## Realtime Internet Apps
 
 ???
+
+* Beyond web pages and Browsers
+* Beyond just HTTP and hyperlinks
 
 ---
 
@@ -74,7 +85,7 @@ template: dblue
 class: bg-contain, em-text, middle, center
 background-image: url(./img/soft-realtime.gif)
 
-# Soft Realtime
+# Firm/Soft Realtime
 
 ???
 
@@ -95,8 +106,13 @@ Is there a timely nature to the data?
 
 ???
 - Is there a value or need to get the data quickly?
-- Does it need to maintain in-context?
-- Hashtags can indicate context after the event.
+- Firm or Soft deadline
+
+---
+
+## Maintain Context
+
+TODO: Example
 
 ---
 
@@ -105,7 +121,7 @@ Is there a timely nature to the data?
 
 ## You Have Real-Time Data
 
-### Events == Real-Time Data
+### Events === Real-Time Data
 
 * Data Changes
 * System Interactions
@@ -248,7 +264,7 @@ Social Demonstrated Value:
 
 * Processors and Memory are cheaper & faster
 * More data can be processes
-* Connections can be dealt with
+* Connections can be dealt with ([C10k problem](https://en.wikipedia.org/wiki/C10k_problem))
 * Scaling is easier
 
 ---
@@ -331,15 +347,26 @@ class: unstyled-links top fixed-width-list
 
 ---
 
-Add Mary Meeker slides
+class: bg-white
+background-image: url(./img/time-on-internet.png)
 
 ---
 
-Specific well know app examples e.g. Twitter, Facebook Messenger, Uber & Google Docs
+class: bg-white
+background-image: url(./img/messaging-apps.png)
 
 ---
 
-Quote from Max Williams of Pusher
+<img width="20%" src="./img/facebook.png" />
+<img width="20%" src="./img/uservoice.png" />
+<img width="25%" src="./img/google-docs.png" />
+<img width="20%" src="./img/uber.png" />
+
+---
+
+> I'm not sure I believe that there is such a thing as "realtime apps" any more. Apps either update instantly and smoothly, or they appear broken. I feel that "realtime" as a feature has moved down the Kano graph. It is much more of an expectation, than an "exciter".
+
+Max Williams (@maxthelion) - CEO, Pusher
 
 ---
 
@@ -361,19 +388,28 @@ background-image: url(img/internet-communications.jpg)
 
 ---
 
+class: top
+
 # Realtime Apps in 2015
+--
+
+* Communication Patterns
+* Use Cases
 
 ???
-In a great place to be able to innovate.
+We're in a great position to be able to innovate.
 So what's being built and with what?
 This is software - these are my opinions. You can achieve similar things in different ways.
 
 ---
 
-class: top trans-h
-background-image: url(./img/itv-news-may-2014.png)
+## Simple Messaging
 
-# Notifications & Signalling
+* Notifications & Signalling
+
+---
+
+background-image: url(./img/itv-news-may-2014.png)
 
 ---
 
@@ -454,10 +490,16 @@ background-image: url(./img/internet-http-es-ws-msg.png)
 
 ---
 
-# Complex Data
+## PubSub (Complex Data)
+
+* Activity Streams
+* Live Polls/Surveys
+* Data Visualizations
+* Chat
 
 ---
 
+template: dblue
 background-image: url(./img/mancity-match-day-centre.png)
 
 ???
@@ -466,6 +508,7 @@ background-image: url(./img/mancity-match-day-centre.png)
 
 ---
 
+template: dblue
 background-image: url(./img/mancity-match-day-centre-pubsub.png)
 
 ???
@@ -476,6 +519,8 @@ background-image: url(./img/mancity-match-day-centre-pubsub.png)
 - PubSub: channels/topics/subjects
 
 ---
+
+class: full-video
 
 <video  poster="video/trader2.png" width="90%" preload="none" controls>
   <source src="video/trader2.mp4" type="video/mp4">
@@ -547,6 +592,7 @@ With events first and then also offering namespaces and rooms.
 * Self Hosted
   * [Socket.IO](http://socket.io) <sup>†</sup>
   * [Faye](http://faye.jcoglan.com)
+  * [SocketStream](https://socketstream.com/)
   * [XSockets](http://xsockets.net) <sup>†</sup>
 ]
 
@@ -566,7 +612,10 @@ background-image: url(./img/internet-http-es-ws-msg-pubsub.png)
 
 ---
 
-# Complex Client/Server Interactions
+# RPC/RMI
+
+* Complex Client/Server Interactions
+* Use Cases?
 
 ???
 - You can use PubSub for this
@@ -626,7 +675,7 @@ game.server.move( me, x, y );
 
 ---
 
-## RMI Solutions
+## RPC/RMI Solutions
 
 .left[* Self Hosted:
   * [dNode](https://github.com/substack/dnode) <small>(Node, PHP, Java, Ruby, Perl)</small>
@@ -634,9 +683,10 @@ game.server.move( me, x, y );
   * [Java.rmi](http://docs.oracle.com/javase/7/docs/api/java/rmi/package-summary.html)
   * [Meteor](https://www.meteor.com/) <small>(Node)</small>
   * [SignalR](http://www.asp.net/signalr) <small>(.NET)</small>
+  * [SocketStream](https://socketstream.com/) <small>(Node.js)</small>
   * [XSockets](http://xsockets.net) <small>(.NET)</small>]
 .right[* Hosted:
-  * *SignalR on Windows Azure?*]
+  * *SignalR/Windows Azure?*]
 
 ---
 
@@ -644,7 +694,10 @@ background-image: url(./img/internet-http-es-ws-msg-pubsub-rmi.png)
 
 ---
 
-# Collaborating on Data
+# DataSync
+
+* Collaboration
+* BaaS
 
 ---
 
@@ -730,11 +783,12 @@ It's now so much easier to innovate!
 
 ---
 
-class: top
+class: top trans-h bg-white
+background-image: url(./img/realtime-web-solutions-updated.png)
 
 ## How do you choose a solution?
 
---
+---
 
 ### Watch my videos :)
 
@@ -759,14 +813,8 @@ You've got to be able to establish a connection.
 class: bottom-left-h trans-all
 background-image: url(./img/rtw-tech-decision-matrix-white.png)
 
-### Communication Pattern
+### Communication Patterns
 
----
-
-background-image: url(./img/rtw-tech-decision-matrix-apps.png)
-
-???
-  
 ---
 
 background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
@@ -782,6 +830,76 @@ background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
 * Reliability
 * Speed
 * Beyond HTTP
+* HTTP2
+
+---
+
+## Standardized Communication Patterns<br />&<br />Protocols
+
+* [SocketIO protocol](https://github.com/socketio/socket.io-protocol)
+* [DDP (Distributed Data Protocol)](https://www.meteor.com/ddp)
+* PubSub: [MQTT](http://mqtt.org/)?
+* Evented PubSub?
+* Other possible standards?
+
+???
+
+* The transportation layer is nearly solved
+
+---
+
+## Real-Time Even More Essential
+
+---
+
+class: top
+
+## Real-Time Use Case Stagnation?
+
+* Notifications & Signalling
+* Activity Streams
+* Data Viz & Polls
+* Chat
+* Collaboration
+* Multiplayer Games
+
+---
+
+## Real-Time Use Case Augmentation
+
+???
+
+* The use case for real-time have stayed the same for the past 5 years
+* The use cases will fundamentally remain the same, but will augment
+
+---
+
+class: trans-h bg-contain bg-white top h-abs-top
+background-image: url(./img/notifications-actions.png)
+
+## Notifications/Activity Streams -> Actions
+
+<a style="position: absolute; bottom: 5%; z-index: 100000; color: black" href="https://blog.intercom.io/the-end-of-apps-as-we-know-them/">The end of apps as we know it - Intercom</a>
+
+---
+
+class: bg-white trans-all top
+background-image: url(./img/google-now.jpg)
+
+## Event Streams
+
+---
+
+class: bg-white trans-all top bg-contain
+background-image: url(./img/google-now-subscriptions.jpg)
+
+## Subscriptions
+
+---
+class: bg-white trans-all top bg-contain
+background-image: url(./img/unified-uis.png)
+
+## Unified UIs
 
 ---
 
@@ -815,6 +933,16 @@ background-image: url(./img/iot-2020.png)
 
 ---
 
+## IoT Platforms
+
+* [SmartThings](http://www.smartthings.com/index.php)
+* ~~[NinjaBlocks](http://ninjablocks.com/)~~ - <small>[announcement](https://discuss.ninjablocks.com/t/ninja-blocks-whats-been-happening-whats-happening-next/3608)</small>
+* [EvryThing](https://www.evrythng.com/)
+* ~~SKYNET.im~~ -> [Octoblu](https://www.octoblu.com/)
+* And many existing real-time services...
+
+---
+
 # And APIs...
 
 ---
@@ -837,15 +965,6 @@ background-image: url(./img/nest-thermostat.jpg)
 
 ???
 - Nest acquired by Google for $3.2B
-
----
-
-## IoT Platforms
-
-* [SmartThings](http://www.smartthings.com/index.php)
-* ~~[NinjaBlocks](http://ninjablocks.com/)~~
-* [EvryThing](https://www.evrythng.com/)
-* [SKYNET.im](http://skynet.im) -> [Octoblu](https://www.octoblu.com/)
 
 ---
 
@@ -880,12 +999,13 @@ class: trans-all
 
 ---
 
-# Realtime Internet Apps =
-# Internet of Things =
-### Web Browsers +
-### Web Servers +
-### Native Apps +
-### Devices +
+# Realtime Internet Apps ===
+# Internet of Things ===  
+* Web Browsers +
+* Web Servers +
+* Native Apps +
+* Devices +
+* ...
 
 ---
 
@@ -893,10 +1013,23 @@ class: title
 
 # Real-Time Web Apps in 2015 & Beyond
 
-Thanks, Feedback & Questions!
+Thanks! Feedback & Questions!
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Evangelism</span>
 * <span class="speaker-pusher-logo"></span>
 
 ???
+
+---
+
+## References 
+
+* [Pusher](https://pusher.com)
+* [These slides - leggetter.github.io/realtime-internet-apps/](http://leggetter.github.io/realtime-internet-apps/)
+* [Mary Meeker's internet trend report](file:///Users/leggetter/Downloads/Internet_Trends_2015_v3.pdf)
+* [DDP Protocol](https://www.meteor.com/ddp)
+* [Socket.IO protocol](https://github.com/socketio/socket.io-protocol)
+* [MQTT](http://mqtt.org/)
+* [Real-Time Web Tech Guide](www.leggetter.co.uk/real-time-web-technologies-guide/)
+* [The end of apps as we know them - Intercom](https://blog.intercom.io/the-end-of-apps-as-we-know-them/)
