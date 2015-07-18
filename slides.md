@@ -107,17 +107,9 @@ Is there a timely nature to the data?
 ???
 - Is there a value or need to get the data quickly?
 - Firm or Soft deadline
+- Maintain Context ??
 
 ---
-
-## Maintain Context
-
-TODO: Example
-
----
-
-<!-- background-image: url(img/excited-data.gif) -->
-<!-- class: em-text -->
 
 ## You Have Real-Time Data
 
@@ -309,7 +301,10 @@ A note on connection strategies with these technologies
 
 ## 5. **MASSIVE** Increase in Internet Usage
 
-## Many of them with a real-time focus!
+---
+
+class: bg-white
+background-image: url(./img/time-on-internet.png)
 
 ---
 
@@ -348,11 +343,6 @@ class: unstyled-links top fixed-width-list
 ---
 
 class: bg-white
-background-image: url(./img/time-on-internet.png)
-
----
-
-class: bg-white
 background-image: url(./img/messaging-apps.png)
 
 ---
@@ -367,6 +357,13 @@ background-image: url(./img/messaging-apps.png)
 > I'm not sure I believe that there is such a thing as "realtime apps" any more. Apps either update instantly and smoothly, or they appear broken. I feel that "realtime" as a feature has moved down the Kano graph. It is much more of an expectation, than an "exciter".
 
 Max Williams (@maxthelion) - CEO, Pusher
+
+???
+
+---
+
+class: bg-contain bg-white
+background-image: url(./img/kano-model.png)
 
 ---
 
@@ -792,9 +789,15 @@ background-image: url(./img/realtime-web-solutions-updated.png)
 
 ### Watch my videos :)
 
-<a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="40%" style="float: left; margin-left: 5%;" /></a>
+<div style="float: left; width: 40%; position: relative;">
+  <a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="100%" /></a>
+  ForwardJS Feb 2015
+</div>
 
-<a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="40%" style="float:right; margin-right: 5%;" /></a>
+<div style="float: right; width: 40%; position: relative;">
+  <a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="100%" /></a>
+  FOWA London 2013
+</div>
 
 ---
 
@@ -807,6 +810,14 @@ background-position: right
 ???
 
 You've got to be able to establish a connection.
+
+---
+
+## Technology Considerations
+
+* Team Skillset
+* Native Mobile support
+* Stage of development
 
 ---
 
@@ -848,61 +859,6 @@ background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
 
 ---
 
-## Real-Time Even More Essential
-
----
-
-class: top
-
-## Real-Time Use Case Stagnation?
-
-* Notifications & Signalling
-* Activity Streams
-* Data Viz & Polls
-* Chat
-* Collaboration
-* Multiplayer Games
-
----
-
-## Real-Time Use Case Augmentation
-
-???
-
-* The use case for real-time have stayed the same for the past 5 years
-* The use cases will fundamentally remain the same, but will augment
-
----
-
-class: trans-h bg-contain bg-white top h-abs-top
-background-image: url(./img/notifications-actions.png)
-
-## Notifications/Activity Streams -> Actions
-
-<a style="position: absolute; bottom: 5%; z-index: 100000; color: black" href="https://blog.intercom.io/the-end-of-apps-as-we-know-them/">The end of apps as we know it - Intercom</a>
-
----
-
-class: bg-white trans-all top
-background-image: url(./img/google-now.jpg)
-
-## Event Streams
-
----
-
-class: bg-white trans-all top bg-contain
-background-image: url(./img/google-now-subscriptions.jpg)
-
-## Subscriptions
-
----
-class: bg-white trans-all top bg-contain
-background-image: url(./img/unified-uis.png)
-
-## Unified UIs
-
----
-
 # More "Things"!
 
 ---
@@ -918,6 +874,8 @@ background-image: url(./img/iot-2020.png)
 
 ---
 
+class: full-video top trans-h
+
 <video  poster="./video/gangnam-thumb.png" width="90%" preload="none" controls>
   <source src="./video/640/gangnam-node-640.mp4" type="video/mp4">
   <source src="./video/640/gangnam-node-640.webm" type="video/webm">
@@ -930,6 +888,15 @@ background-image: url(./img/iot-2020.png)
 - Lots of use in agriculture
 - AR Drones controlled via UDP packets
 - Generally accessed via a library abstraction
+
+---
+
+class: trans-h bg-cover bottom bg-white
+background-image: url(./img/the-physical-web.png)
+
+<h2 style="position: absolute; right: 1%; display: inline-block;">
+  <a href="https://www.youtube.com/watch?v=1yaLPRgtlR0&feature=youtu.be">The Physical Web</a>
+</h2>
 
 ---
 
@@ -947,16 +914,28 @@ background-image: url(./img/iot-2020.png)
 
 ---
 
-* Use Realtime
+## Real-Time Evented APIs
+
+.left[* APIs
   * Twilio
   * SendGrid
   * MailChimp
   * Iron.io
   * GitHub
   * Trello
-  * ...
-* APIs for APIs
-  * Fanout.io
+  * ...]
+.right[* APIs for APIs
+  * Fanout.io]
+  
+???
+
+1. Push as soon as event occurs
+2. Enables expected real-time experiences
+
+---
+
+class: bg-white
+background-image: url(./img/apps-with-realtime-apis.png)
 
 ---
 
@@ -964,7 +943,59 @@ class: bg-white
 background-image: url(./img/nest-thermostat.jpg)
 
 ???
+- Combining APIs & Things... with real consumer uses
 - Nest acquired by Google for $3.2B
+
+---
+
+## Real-Time Experiences Even More Essential
+
+---
+
+class: top
+
+## Real-Time Use Case Evolution
+
+* Notifications & Signalling
+* Activity Streams
+* Data Viz & Polls
+* Chat
+* Collaboration
+* Multiplayer Games
+
+???
+
+* The use case for real-time have stayed the same for the past 5 years
+* The use cases will fundamentally remain the same, but will augment
+
+---
+
+class: trans-h bg-contain bg-white top h-abs-top
+background-image: url(./img/notifications-actions.png)
+
+## Notifications/Activity Streams -> Actions
+
+<a style="position: absolute; bottom: 5%; z-index: 100000; color: black" href="https://blog.intercom.io/the-end-of-apps-as-we-know-them/">The end of apps as we know it - Intercom</a>
+
+---
+
+class: bg-white trans-all top bg-contain
+background-image: url(./img/google-now-subscriptions.jpg)
+
+## Subscriptions
+
+---
+
+class: bg-white trans-all top
+background-image: url(./img/google-now.jpg)
+
+## Event Streams
+
+---
+class: bg-white trans-all top bg-contain
+background-image: url(./img/unified-uis.png)
+
+## Unified UIs
 
 ---
 
@@ -987,6 +1018,8 @@ class: trans-all
 
 ---
 
+class: full-video
+
 <video  poster="./video/ben-foxall-multi-device-web-futurejs.png" width="90%" preload="none" controls>
   <source src="./video/640/ben-foxall-multi-device-web-futurejs-640.mp4" type="video/mp4">
   <source src="./video/640/ben-foxall-multi-device-web-futurejs-640.webm" type="video/webm">
@@ -997,6 +1030,29 @@ class: trans-all
 - What if we think in multiples?
 - What sort of experiences and uses would that result in?
 
+---
+
+class: top fixed-width-list
+
+# Summary
+--
+
+* Internet === Communications platform
+--
+
+* Easier to innovate
+--
+
+* Everybody has real-time data
+  * Use it to build expected experiences
+--
+
+* Future  
+  * Improvements: Infrastructure & Standards
+  * IoT
+  * APIs
+  * Event Streams
+  
 ---
 
 # Realtime Internet Apps ===
@@ -1018,6 +1074,7 @@ Thanks! Feedback & Questions!
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Evangelism</span>
 * <span class="speaker-pusher-logo"></span>
+* [pusher.com](https://pusher.com)
 
 ???
 
@@ -1028,6 +1085,7 @@ Thanks! Feedback & Questions!
 * [Pusher](https://pusher.com)
 * [These slides - leggetter.github.io/realtime-internet-apps/](http://leggetter.github.io/realtime-internet-apps/)
 * [Mary Meeker's internet trend report](file:///Users/leggetter/Downloads/Internet_Trends_2015_v3.pdf)
+* [Kano model](https://en.wikipedia.org/wiki/Kano_model)
 * [DDP Protocol](https://www.meteor.com/ddp)
 * [Socket.IO protocol](https://github.com/socketio/socket.io-protocol)
 * [MQTT](http://mqtt.org/)
