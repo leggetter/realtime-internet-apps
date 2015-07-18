@@ -25,6 +25,22 @@ class: title
 
 ---
 
+## A bit about me
+
+* Working with Real-Time Tech since 2001
+* Software Engineer
+* APIs, SDKs, Docs, Developer Experience
+* Blogger & Author
+* Roles:
+  * Caplin Systems
+  * ESRI
+  * Caplin Systems
+  * Pusher
+  * Caplin Systems/BladeRunnerJS
+  * Pusher
+
+---
+
 template: dblue
 class: bg-contain, pusher-circle
 background-image: url(./img/pusher-circles.png)
@@ -125,6 +141,12 @@ The real-time web is sometimes referred to as the "Evented Web"
 
 ---
 
+class: full-image
+
+<a href="https://www.youtube.com/watch?v=rk5Jm1IHxlI">![](./img/you-have-realtime-data-video.png)</a>
+
+---
+
 ## User Experience
 
 Is there a timely nature to the experience?
@@ -161,7 +183,8 @@ background-image: url(img/internet.png)
 class: bg-contain
 
 ???
-Like any technology basics of the Internet don't give us enough to work with.
+* Like any technology basics of the Internet don't give us enough to work with.
+* Arrow -> Effort required to innovate
 
 ---
 
@@ -385,7 +408,7 @@ background-image: url(img/internet-communications.jpg)
 
 ---
 
-class: top
+class: top padding-center-fix
 
 # Realtime Apps in 2015
 --
@@ -496,7 +519,7 @@ background-image: url(./img/internet-http-es-ws-msg.png)
 
 ---
 
-template: dblue
+template: dblue bg-contain
 background-image: url(./img/mancity-match-day-centre.png)
 
 ???
@@ -787,17 +810,12 @@ background-image: url(./img/realtime-web-solutions-updated.png)
 
 ---
 
-### Watch my videos :)
+## Technology Considerations
 
-<div style="float: left; width: 40%; position: relative;">
-  <a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="100%" /></a>
-  ForwardJS Feb 2015
-</div>
-
-<div style="float: right; width: 40%; position: relative;">
-  <a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="100%" /></a>
-  FOWA London 2013
-</div>
+* Team Skillset (language, infrastructure)
+* Business Focus
+* Native Mobile Support
+* Stage of Development
 
 ---
 
@@ -813,14 +831,6 @@ You've got to be able to establish a connection.
 
 ---
 
-## Technology Considerations
-
-* Team Skillset
-* Native Mobile support
-* Stage of development
-
----
-
 class: bottom-left-h trans-all
 background-image: url(./img/rtw-tech-decision-matrix-white.png)
 
@@ -831,6 +841,23 @@ background-image: url(./img/rtw-tech-decision-matrix-white.png)
 background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
 
 ---
+
+### Watch my videos :)
+
+<div style="float: left; width: 40%; position: relative;">
+  <a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="100%" /></a>
+  ForwardJS Feb 2015
+</div>
+
+<div style="float: right; width: 40%; position: relative;">
+  <a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="100%" /></a>
+  FOWA London 2013
+</div>
+
+---
+
+class: trans-h bottom
+background-image: url(./img/wow.gif)
 
 # Beyond
 
@@ -939,6 +966,14 @@ background-image: url(./img/apps-with-realtime-apis.png)
 
 ---
 
+class: bg-white full-image
+
+<a href="https://www.youtube.com/embed/XXgSFbphW88">
+  ![](./img/real-time-api-video.png)
+</a>
+
+---
+
 class: bg-white
 background-image: url(./img/nest-thermostat.jpg)
 
@@ -949,6 +984,9 @@ background-image: url(./img/nest-thermostat.jpg)
 ---
 
 ## Real-Time Experiences Even More Essential
+
+* Data
+* Audio & Video
 
 ---
 
@@ -1045,6 +1083,7 @@ class: top fixed-width-list
 
 * Everybody has real-time data
   * Use it to build expected experiences
+  * If not, your apps will feel broken
 --
 
 * Future  
