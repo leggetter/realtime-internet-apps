@@ -149,23 +149,69 @@
       .padding-center-fix {
         padding-top: 21%;
       }
+      
+      .twitter_id {
+        position: fixed;
+        bottom: 7%;
+        right: 20px;
+        font-size: 0.6em;
+        color: white;
+        z-index: 100000;
+      }
+      
+      .twitter-id-left .twitter_id {
+        left: 20px;
+      }
+      
+      .no-overlay .twitter_id,
+      .no-overlay .remark-slide-number {
+        display: none;
+      }
+      
+      /* Add to themes.css */
+      
+      .remark-slide ul, 
+      .remark-slide ol {
+        text-align: left;
+      }
+      
+      .fixed-width-list > ul,
+      .fixed-width-list > ol {
+        width: 650px;
+        display: inline-block;
+      }
+      
+      .bg-dark-blue {
+        background-color: #27343d !important;
+      }
+      
+      .remark-code {
+        line-height: 22px;
+      }
+      
+      .long .remark-code {
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+      }
+      
+      .larger-code .remark-code {
+        line-height: 24px;
+        font-size: 22px;
+      }
     </style>
   </head>
   <body>
-    
-    <span id="twitter_id">@leggetter</span>
 
-    <script src="js/remark.js" type="text/javascript">
-    </script>
-    <script type="text/javascript">
+    <script src="./bower_components/remark/out/remark.min.js"></script>
+    <script>
       var slideshow = remark.create({
         sourceUrl: 'slides.md',
         highlightLanguage: 'remark',
         navigation: {
-          scroll: false,
-
+          scroll: false
         },
-        ratio: "16:9"
+        ratio: "16:9",
+        countIncrementalSlides: false
       });
     </script>
   </body>

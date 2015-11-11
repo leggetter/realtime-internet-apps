@@ -1,11 +1,11 @@
 {
   "name": "web-components-now",
-  "version": "0.0.0",
-  "homepage": "https://github.com/leggetter/web-components-now",
+  "version": "3.0.0-alpha",
+  "homepage": "https://github.com/leggetter/realtime-internet-apps",
   "authors": [
     "leggetter <phil@leggetter.co.uk>"
   ],
-  "description": "Why you should be using Web Components Now. And How.",
+  "description": "Real-Time Internet Apps",
   "keywords": [
     "presentation"
   ],
@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "pusher-remark-themes": "*"
+    "pusher-remark-themes": "*",
+    "remark": "~0.12.0"
   }
 }

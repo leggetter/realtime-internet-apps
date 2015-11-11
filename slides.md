@@ -1,60 +1,131 @@
 name: dblue
+class: bg-dark-blue, center, middle
 layout: true
 
-class: bg-dark, center, middle
+<span class="twitter_id">@leggetter</span>
+
+---
+
+name: pink
+layout: true
+
+class: bg-pink, center, middle
+
+<span class="twitter_id">@leggetter</span>
+
+---
+
+name: green
+class: green-template, center, middle
+layout: true
+
+<span class="twitter_id">@leggetter</span>
 
 ---
 
 name: lblue
 layout: true
-
 class: bg-light, center, middle
+
+<span class="twitter_id">@leggetter</span>
 
 ---
 
+name: white
+layout: true
+class: bg-white, center, middle, black-text
+
+<span class="twitter_id">@leggetter</span>
+
+---
+
+template: white
 class: title
 
-# Real-Time Web Apps in 2015 & Beyond
+<div style="float: left; width: 50%">
+  <h1>Real-Time Web Apps in 2015 & Beyond</h1>
+  <h2>FOWA Boston 2015</h2>
+</div>
+
+<img src="./img/fowa-future.png" style="float: right; width: 50%" />
+
+???
+
+* Real-Time Web Apps in 2015 & Beyond
+* FOWA LDN -> BOS
+
+---
+
+template: pink
+class: top
+
+# Real-Time FOWA
+
+--
+.left[
+## 5 talks on Real-Time
+]
+--
+.left[
+## 4 talks on IoT
+]
+--
+.center[
+## 21 talks at FOWA 2105
+]
+--
+.center[
+## <span style="font-size: 1.5em; margin: 0;">Over 40%</span> talks on Real-Time
+]
+
+---
+
+class: no-overlay
+background-image: url(./img/realtime-revolution.jpg)
+
+???
+
+* Since 2001 -> trends
+* Current surge
+* Continued trend
+* IoT? More to it
+* Past, present & future
+* Internet is our communications platform
+
+---
+
+template: lblue
+class: title
 
 * <span class="speaker">Phil @leggetter</span>
-* <span class="speaker-job-title">Head of Evangelism</span>
+* <span class="speaker-job-title">Head of Developer Relations</span>
 * <span class="speaker-pusher-logo"></span>
-* [pusher.com](https://pusher.com)
+
+???
+
+* Real-time since 2001
+* SDKs
+* Apps
+* Evangelism
+
+---
+
+template: white
+class: bg-contain
+background-image: url(./img/pusher-white-cloud.png)
 
 ???
 
 ---
 
-## A bit about me
+## Realtime Web Apps
 
-* Working with Real-Time Tech since 2001
-* Software Engineer
-* APIs, SDKs, Docs, Developer Experience
-* Blogger & Author
-* Roles:
-  * Caplin Systems
-  * ESRI
-  * Caplin Systems
-  * Pusher
-  * Caplin Systems/BladeRunnerJS
-  * Pusher
-
----
-
-template: dblue
-class: bg-contain, pusher-circle
-background-image: url(./img/pusher-circles.png)
-
----
-
-<a href="https://www.youtube.com/watch?v=E2GhY9NaDkQ">
-  <img src="./img/2014-and-beyond.png"
-       style="position: absolute; top: 0; left: 0; width: 100%;" />
-</a>
+> The World Wide Web (www) is an information space where documents and other web resources are identified by URLs, interlinked by hypertext links, and can be accessed via the Internet
 
 ---
 
 ## Realtime Web Apps
+
 --
 
 ## &#8595;
@@ -71,15 +142,16 @@ background-image: url(./img/pusher-circles.png)
 
 ---
 
-template: lblue
+template: dblue
 class: h1-big
 
-# Realtime
+# Realtime?
 
 ???
 
 ---
 
+template: dblue
 class: bg-cover, em-text
 background-image: url(./img/warp-core.gif)
 
@@ -87,6 +159,7 @@ background-image: url(./img/warp-core.gif)
 
 ---
 
+template: dblue
 class: bg-cover
 background-image: url(./img/core-breach.gif)
 
@@ -110,7 +183,7 @@ background-image: url(./img/soft-realtime.gif)
 
 ---
 
-template: lblue
+template: dblue
 
 # When do we need Realtime?
 
@@ -118,7 +191,7 @@ template: lblue
 
 ## Data
 
-Is there a timely nature to the data?
+### Is there a timely nature to the data?
 
 ???
 - Is there a value or need to get the data quickly?
@@ -127,13 +200,21 @@ Is there a timely nature to the data?
 
 ---
 
+template: pink
+class: fixed-width-list top
+
 ## You Have Real-Time Data
 
-### Events === Real-Time Data
+--
 
+Any event in your web stack...
+
+* Incoming Data
 * Data Changes
 * System Interactions
 * User Interactions
+
+... represents real-time data.
 
 ???
 
@@ -158,6 +239,9 @@ Is there a timely nature to the experience?
 
 ---
 
+template: pink
+class: fixed-width-list
+
 ## Realtime is required when there's a *Need* or *Demand* for:
 
 * Up to date information
@@ -165,9 +249,17 @@ Is there a timely nature to the experience?
 
 ---
 
+class: top
+
+<br /><br />
+
 # These aren't new *Needs* or *Demands*
 
 ## But...
+
+--
+
+# The Internet
 
 ???
 
@@ -175,16 +267,20 @@ But we had a constraint... The Internet
 
 ---
 
-# Internet
-
----
-
 background-image: url(img/internet.png)
 class: bg-contain
 
 ???
-* Like any technology basics of the Internet don't give us enough to work with.
+* long strived to build real-time Internet applications
 * Arrow -> Effort required to innovate
+
+---
+
+background-image: url(img/plato-talkomatic.png)
+class: bg-contain
+
+???
+Talkomatic realtime Chat - created back in 1973
 
 ---
 
@@ -198,16 +294,6 @@ background-image: url(img/internet-http.png)
 
 ---
 
-background-image: url(img/plato-talkomatic.png)
-template: dblue
-class: bg-contain
-
-???
-Talkomatic realtime Chat - created back in 1973
-
----
-
-template: dblue
 background-image: url(img/yahoo-chat.png)
 
 ???
@@ -215,7 +301,6 @@ Yahoo! Web chat. Looks like a Java Applet.
 
 ---
 
-template: dblue
 background-image:url(img/reuters-kobra.png)
 class: bg-contain
 
@@ -224,11 +309,12 @@ Financial Data. Also Java.
 
 ---
 
-template: dblue
 background-image: url(img/legacy-finance-web.gif)
 class: bg-contain
 
 ---
+
+class: fixed-width-list
 
 ## HTTP wasn't enough!
 
@@ -241,23 +327,31 @@ class: bg-contain
 
 ---
 
+class: fixed-width-list
+
 ## Hacks & Tricks
 
 * Java Applets
 * Flash
 * HTTP Hacks
 
+???
+
+* So we hacked!
+* And we continued to hack for years!
+
 ---
 
-# 5 Things that have made Real-Time Mainstream?
+template: dblue
+
+# 5 Things that have made Real-Time Mainstream
 
 ???
 
 ---
 
-template: dblue
 background-image: url(img/follow-magnified.png)
-class: trans-all, top
+class: trans-h, top
 
 # 1. Social
 
@@ -275,14 +369,18 @@ Social Demonstrated Value:
 
 ---
 
+class: fixed-width-list
+
 ## 2. Improved Server Power
 
 * Processors and Memory are cheaper & faster
 * More data can be processes
 * Connections can be dealt with ([C10k problem](https://en.wikipedia.org/wiki/C10k_problem))
-* Scaling is easier
+* Scaling is possible
 
 ---
+
+class: fixed-width-list
 
 ## 3. Web Browser Capabilities and Consistency
 
@@ -300,7 +398,8 @@ Cross browser "Hacks"
 class: bg-contain
 background-image:url(img/internet-http-es-ws.png)
 
----
+--
+class: trans-h bottom
 
 # Any Client Technology
 
@@ -314,20 +413,23 @@ A note on connection strategies with these technologies
 
 ---
 
+class: fixed-width-list
+
 ## 4. Software Choice
 
 * Lots of language & runtime options
 * More open source solutions
-* Hosted services
+* "The cloud"/hosted services
+
+???
+
+* 2001 - only proprietary
+* 2010 - this changed
+* Lang/runtime choice
 
 ---
 
 ## 5. **MASSIVE** Increase in Internet Usage
-
----
-
-class: bg-white
-background-image: url(./img/time-on-internet.png)
 
 ---
 
@@ -366,14 +468,36 @@ class: unstyled-links top fixed-width-list
 ---
 
 class: bg-white
+background-image: url(./img/time-on-internet.png)
+
+???
+
+Mary Meeker, Kliener Perkins, Internet Trends 2015
+
+---
+
+class: bg-white
 background-image: url(./img/messaging-apps.png)
 
 ---
+
+template: pink
+class: top
+
+# Real-Time is Essential
+
+--
+
+<br />
 
 <img width="20%" src="./img/facebook.png" />
 <img width="20%" src="./img/uservoice.png" />
 <img width="25%" src="./img/google-docs.png" />
 <img width="20%" src="./img/uber.png" />
+
+???
+
+Whether it's...
 
 ---
 
@@ -383,6 +507,8 @@ Max Williams (@maxthelion) - CEO, Pusher
 
 ???
 
+One step further
+
 ---
 
 class: bg-contain bg-white
@@ -390,46 +516,110 @@ background-image: url(./img/kano-model.png)
 
 ---
 
-# Real-Time is Essential because...
-
----
-
-template: dblue
-class: trans-all bg-cover bg-fade top fixed-width-list
-background-image: url(img/internet-communications.jpg)
+template: pink
+class: top fixed-width-list
 
 ## The Internet...
 --
 
-1. **is *the* communications platform**
+## 1. is our main **communications platform**
 --
 
-2. **is becoming *the* entertainment platform**
+## 2. is becoming our main **entertainment platform**
+--
+
+## 3. should give users **real-time experiences**
 
 ---
-
-class: top padding-center-fix
+template: dblue
 
 # Realtime Apps in 2015
---
-
-* Communication Patterns
-* Use Cases
 
 ???
 We're in a great position to be able to innovate.
 So what's being built and with what?
-This is software - these are my opinions. You can achieve similar things in different ways.
 
 ---
+
+class: top padding-center-fix fixed-width-list
+
+# Realtime Apps in 2015
+
+* Communication Patterns
+???
+
+* ways that clients and servers can communicate / real-time frameworks
+* 5 different patterns
+
+--
+
+* Real-time use Cases
+
+???
+
+* Look at comms pattern
+* Which use case they're best suited to
+
+---
+
+class: fixed-width-list
 
 ## Simple Messaging
 
-* Notifications & Signalling
+???
+
+* connection over which you can send a data payload
 
 ---
 
-background-image: url(./img/itv-news-may-2014.png)
+class: code-reveal top larger-code
+
+Client
+
+```js
+var ws = WebSocket('ws://localhost/');
+```
+--
+```js
+ws.onmessage = function(evt) {
+  console.log(evt.data);
+};
+```
+--
+
+Server
+
+```js
+// server
+server.on('connection', function(socket){
+```
+--
+```js
+  socket.send('utf 8 string');
+});
+```
+
+???
+
+* Simplistic pattern
+* Similar to WebHooks
+
+---
+
+background-image: url(./img/internet-http-es-ws-msg.png)
+
+---
+
+class: fixed-width-list
+
+## Simple Messaging: Use cases
+
+* Signalling
+
+???
+
+* Basic things
+* Simple message or even no payload
 
 ---
 
@@ -461,170 +651,36 @@ background-image: url(./img/talky-io.png)
 
 ---
 
-**Receive message**
+## Publish-Subscribe (PubSub)
+
+???
+
+* messaging pattern
+
+---
+
+class: top code-reveal larger-code
+
+Client
 
 ```js
-var socket = new eio.Socket('ws://localhost/');
-socket.on('open', function(){
-  socket.on('message', function(data){
-    console.log(data);
-  });
+var client = new Client('http://localhost:8000/');
+```
+--
+```js
+client.subscribe('news', function(data) {
+```
+--
+```js
+  console.log(data.headline);
 });
 ```
-
-**Send Message**
-
-```js
-var engine = require('engine.io');
-var server = engine.listen(80);
-
-server.on('connection', function(socket){
-  socket.send('utf 8 string');
-  socket.send(new Buffer([0, 1, 2, 3, 4, 5])); // binary data
-})
-```
-
----
-
-## Simple Messaging Solutions
-
-.col-3rd[* Server/Server
-  * WebHooks]
-  
-.col-3rd[* Client/Server
-  * [SockJS](https://github.com/sockjs)
-  * [Engine.IO](https://github.com/automattic/engine.io)
-  * [Primus](https://github.com/primus/primus)]
-  
-.col-3rd[* Peer-to-Peer
-  * [simpleWebRTC](http://simplewebrtc.com/)
-  * [PeerJS](http://peerjs.com/)]
-
-???
-* Not too many to choose from
-* For client/server you generally need a higher abstraction.
-
----
-
-background-image: url(./img/internet-http-es-ws-msg.png)
-
----
-
-## PubSub (Complex Data)
-
-* Activity Streams
-* Live Polls/Surveys
-* Data Visualizations
-* Chat
-
----
-
-template: dblue bg-contain
-background-image: url(./img/mancity-match-day-centre.png)
-
-???
-- Manchester City Match Day Centre
-- Identify and get the specific pieces of information that it needs
-
----
-
-template: dblue
-background-image: url(./img/mancity-match-day-centre-pubsub.png)
-
-???
-- Overview data about the score, scorers, location and time played
-- Timeline information about key events
-- Activity Streams
-- An overview of the status of the starting 11 players
-- PubSub: channels/topics/subjects
-
----
-
-class: full-video
-
-<video  poster="video/trader2.png" width="90%" preload="none" controls>
-  <source src="video/trader2.mp4" type="video/mp4">
-  <source src="video/trader2.webm" type="video/webm">
-</video>
-
-???
-- Subscribe to what's visible
-- Sub/Unsub as required
-
----
-
-class: long
-
-## PubSub
-
-**Subscribe**
+--
+Server
 
 ```js
-var client = new Faye.Client('http://localhost:8000/');
-
-client.subscribe('/messages', function(message) {
-  alert('Got a message: ' + message.text);
-});
+server.publish('news', {headline: 'Pusher Rocks!'});
 ```
-
-**Publish**
-
-```js
-client.publish('/messages', {text: 'Hello world'});
-```
-
----
-
-class: long
-
-## Evented PubSub
-
-**Subscribe**
-
-```js
-var pusher = new Pusher( APP_KEY );
-var channel = pusher.subscribe( 'messages' );
-
-channel.bind( 'new_message', function( data ) {
-  // Handle Update
-} );
-
-channel.bind( 'message_updated', function( data ) {
-} );
-```
-
-**Publish**
-
-```js
-var data = {text: 'Hello world'};
-pusher.trigger( 'messages', 'new_message', data );
-```
-
-???
-In many ways Socket.IO is also an evented PubSub solution.
-With events first and then also offering namespaces and rooms.
-
----
-
-## PubSub Solutions
-
-.left[
-* Self Hosted
-  * [Socket.IO](http://socket.io) <sup>†</sup>
-  * [Faye](http://faye.jcoglan.com)
-  * [SocketStream](https://socketstream.com/)
-  * [XSockets](http://xsockets.net) <sup>†</sup>
-]
-
-.right[
-* Hosted
-  * [Hydna](http://hydna.com)
-  * [PubNub](http://pubnub.com)
-  * [Pusher](http://pusher.com) <sup>†</sup>
-  * [Realtime.co](http://realtime.co)
-]
-
-<small style="position: absolute; bottom: 5%;">† Evented PubSub solutions</small>
 
 ---
 
@@ -632,15 +688,237 @@ background-image: url(./img/internet-http-es-ws-msg-pubsub.png)
 
 ---
 
-# RPC/RMI
+class: fixed-width-list
 
-* Complex Client/Server Interactions
-* Use Cases?
+## PubSub: Use Cases
+
+* Signalling
+* Notifications
+* Activity streams
+* Data visualisation
+* Real-time geolocation
+* Chat
+* more...
 
 ???
-- You can use PubSub for this
-- CT - initially just displaying data - now interactive.
-- Complex client/server business workflows
+
+Most common communication pattern in real-time frameworks
+
+---
+
+class: bg-contain
+background-image: url(./img/itv-news-nov-2015.gif)
+
+???
+
+Topic targeted notifications
+
+---
+
+class: bg-contain
+background-image: url(./img/lequipe-football.png)
+
+???
+
+* Complex data partitioning
+* Mapping to data on the back-end
+* Or regions in the UI
+
+---
+
+class: bg-contain
+background-image: url(./img/lequipe-football-regions.png)
+
+???
+
+* match overview 
+* timeline events
+* overview stats
+* team lineup
+* each tab in the UI
+
+---
+
+# Evented PubSub
+
+???
+
+An improvement on PubSub
+That lends itself to the real-time "evented" web
+
+---
+
+class: long wide code-reveal top
+
+Client
+
+```js
+var pusher = new Pusher(APP_KEY);
+var channel = pusher.subscribe('news');
+```
+--
+```js
+channel.bind('created', function(data) {
+  // Add news to UI
+});
+```
+--
+```js
+channel.bind('updated', function(data) {
+  // Update news
+});
+channel.bind('deleted', function(data) {
+  // Remove news
+});
+```
+--
+
+Server
+
+```js
+pusher.trigger('news', 'created', {headline: 'PubSub Rocks!', id: 1});
+```
+--
+```js
+pusher.trigger('news', 'updated', {headline: 'Evented PubSub Rocks!', id: 1});
+pusher.trigger('news', 'deleted', {id: 1});
+```
+
+---
+
+class: fixed-width-list
+
+## Evented PubSub: Use Cases
+
+* Signalling
+* Notifications
+* Activity streams
+* Data visualisation
+* Real-time geolocation
+* Chat
+* more...
+* ... and framework abstractions
+
+???
+
+---
+
+background-image: url(./img/internet-http-es-ws-msg-pubsub-evented.png)
+
+---
+
+class: bg-contain
+background-image: url(./img/slack-ui.png)
+
+---
+
+class: bg-contain
+background-image: url(./img/slack-ui-channels.png)
+
+---
+
+class: long larger-code top code-reveal
+
+PubSub
+
+```js
+client.subscribe('devexp-channel', function(data) {
+  if(data.eventType === 'chat-message') {
+    addMessage(data.message);
+  }
+```
+--
+```js
+  else if(data.eventType === 'channel-purposed-changed') {
+    updateRoomTitle(data.purpose);
+  }
+  else if(/* and so on */) {
+  }
+})
+```
+
+--
+
+Evented PubSub
+
+```js
+var channel = pusher.subscribe('devexp-channel');
+channel.bind('chat-message', addMessage);
+channel.bind('channel-purposed-changed', updateChannelPurpose);
+```
+--
+```js
+channel.bind('current-topic-changed', updateChannelTopic);
+channel.bind('user-online', userOnline);
+channel.bind('user-offline', userOffline);
+```
+
+---
+
+# RPC/RMI
+
+???
+
+I'll use the term "RMI"
+
+---
+
+class: top code-reveal long
+
+Client
+
+```js
+rmi({
+```
+--
+```js
+  newMessage: function(message) {
+    console.log(message);
+  }
+})
+```
+--
+```js
+.on('remote', function(remote) {
+```
+--
+```js
+  remote.sendMessage({text: 'dnode baby!'});
+});
+```
+--
+
+Server
+
+```js
+var remotes = [];
+rmi({
+  sendMessage: function(message) {
+```
+--
+```js
+    remotes.forEach(function(remote) {
+      remote.newMessage(message);
+    });
+  }
+})
+```
+--
+```js
+.on('remote', function(remote) {
+  remotes.push(remote);
+});
+```
+
+---
+
+background-image: url(./img/internet-http-es-ws-msg-pubsub-rmi.png)
+
+---
+
+## RPC/RMI: Use Cases
+
+### ?
 
 ---
 
@@ -655,204 +933,92 @@ background-image: url(img/fx-motif.png)
 - Confirm ack / expired
 - Easier to be calling methods on objects? RMI
 - What is RMI?
+- *This actually uses a PubSub framework**
 
 ---
 
-background-image: url(img/shooter.png)
-
-???
-- Game state authority
-- Complex rich symantic interactions
-- May be better suited to RMI?
+# Data Synchronisation (DataSync)
 
 ---
 
-**Server**
+class: code-reveal top larger-code
+
+Client
 
 ```js
-public class GameHub : Hub {
-    public void Move(Player p, int x, int y) {
-      // Check if move is allowed
-      // Call the broadcastMessage method to update clients.
-      Clients.All.playerMoved(p, x, y);
-    }
-}
+var sync = new DataSync();
+
+var ref = sync.get('messages');
 ```
+--
+```js
 
-**Client**
-
-```
-$.connection.hub.start(); // async
-
-var game = $.connection.gameHub;
-
-game.client.playerMoved = function (player, x, y) {
-  // update game
-};
-
-game.server.move( me, x, y );
-```
-
----
-
-## RPC/RMI Solutions
-
-.left[* Self Hosted:
-  * [dNode](https://github.com/substack/dnode) <small>(Node, PHP, Java, Ruby, Perl)</small>
-  * [eureca.io](https://github.com/Ezelia/eureca.io) <small>(Node)</small>
-  * [Java.rmi](http://docs.oracle.com/javase/7/docs/api/java/rmi/package-summary.html)
-  * [Meteor](https://www.meteor.com/) <small>(Node)</small>
-  * [SignalR](http://www.asp.net/signalr) <small>(.NET)</small>
-  * [SocketStream](https://socketstream.com/) <small>(Node.js)</small>
-  * [XSockets](http://xsockets.net) <small>(.NET)</small>]
-.right[* Hosted:
-  * *SignalR/Windows Azure?*]
-
----
-
-background-image: url(./img/internet-http-es-ws-msg-pubsub-rmi.png)
-
----
-
-# DataSync
-
-* Collaboration
-* BaaS
-
----
-
-background-image: url(./img/gdocs-collaboration.png)
-
-???
-- Any use case where you're working on a data structure
-- Agile PM boards is common use case
-- Online Code Editors
-
----
-
-background-image: url(./img/collaborative-mapping.png)
-
----
-
-class: bottom trans-h full-video
-
-<h1 style="position: relative; z-index: 1000000;">Physical Collaborative Mapping</h1>
-
-<video  poster="./video/physical-collaborative-mapping.png" width="90%" preload="none" controls>
-  <source src="./video/640/physical-collaborative-mapping-640.mp4" type="video/mp4">
-  <source src="./video/640/physical-collaborative-mapping-640.webm" type="video/webm">
-</video>
-
-???
-- Large organisations are looking into creating realtime emergency centres
-
----
-
-**DataSync**
-
-```
-var myDataRef = new Firebase('https://my-app.firebaseio.com/');
-
-myDataRef.push( {creator: '@leggetter', text: 'Not a Test!'} );
-
-myDataRef.on( 'child_added', function(snapshot) {
-  // Add the data
-});
-
-myDataRef.on( 'child_changed', function(snapshot) {
-  // Update the data
-});
-
-myDataRef.on( 'child_removed', function(snapshot) {
-  // Remove the data
+ref.on(function(val) {
+  console.log(val)
 });
 ```
+--
 
----
+```js
+ref.put({text: 'Hello, DataSync!'}).key('unique-key');
+```
+--
 
-## Data Sync Solutions
+```js
 
-.left[
-* Self Hosted:
-  * [CouchDB](http://couchdb.apache.org/) + [pouchdb](http://pouchdb.com/)
-  * [DerbyJS](http://derbyjs.com/)
-  * [LowlaDB](https://github.com/lowla)
-  * [Meteor](http://meteor.com)
-  * [ShareJS](https://github.com/share/ShareJS)
-]
-.right[* Hosted:
-  * [Firebase](http://firebase.com)
-  * [Flybase](http://flybase.io/)
-  * [Google Drive Realtime API](https://developers.google.com/drive/realtime/)
-  * [Realtime.co](http://realtime.co)
-  * [Simperium](http://simperium.com)
-  * [Syncano](http://syncano.com)
-]
+ref.path('unique-key').set(null);
+```
+--
 
-???
-
-* Some are a bit more "all-in" than others
-* e.g. Meteor & Derby offer templating
+Framework handles updates to other clients
 
 ---
 
 background-image: url(./img/internet-http-es-ws-msg-pubsub-rmi-ds.png)
 
 ???
-It's now so much easier to innovate!
+
+Built on top of PubSub/Evented PubSub
 
 ---
 
-class: top trans-h bg-white
-background-image: url(./img/realtime-web-solutions-updated.png)
+class: fixed-width-list
 
-## How do you choose a solution?
+## DataSync: Use Cases
 
----
-
-## Technology Considerations
-
-* Team Skillset (language, infrastructure)
-* Business Focus
-* Native Mobile Support
-* Stage of Development
-
----
-
-class: bottom-left-h trans-all bg-right
-background-image: url(./img/connection-strategies.png)
-background-position: right
-
-### Connection Strategy
+* Collaboration
+* Multi-player games
 
 ???
 
-You've got to be able to establish a connection.
+---
+
+class: bg-contain
+
+background-image: url(./img/gdocs-collaboration.png)
+
+???
+
+* Word v GDocs workflow
 
 ---
 
-class: bottom-left-h trans-all
-background-image: url(./img/rtw-tech-decision-matrix-white.png)
-
-### Communication Patterns
+## Choosing a Communication Pattern
 
 ---
 
-background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
+class: trans-h
+background-image: url(./img/rtw-tech-decision-matrix-black.png)
+
+<h3 style="position: absolute; bottom: -2%; left: 0; display: inline;">Communication Patterns</h3>
 
 ---
 
-### Watch my videos :)
+class: trans-h
 
-<div style="float: left; width: 40%; position: relative;">
-  <a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="100%" /></a>
-  ForwardJS Feb 2015
-</div>
+background-image: url(./img/rtw-tech-decision-matrix-usecases-black.png)
 
-<div style="float: right; width: 40%; position: relative;">
-  <a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="100%" /></a>
-  FOWA London 2013
-</div>
+<h3 style="position: absolute; bottom: -2%; left: 0; display: inline;">Communication Patterns & Use Cases</h3>
 
 ---
 
@@ -863,6 +1029,8 @@ background-image: url(./img/wow.gif)
 
 ---
 
+class: fixed-width-list
+
 ## Network Infrastructure
 
 * Reliability
@@ -871,6 +1039,8 @@ background-image: url(./img/wow.gif)
 * HTTP2
 
 ---
+
+class: fixed-width-list
 
 ## Standardized Communication Patterns<br />&<br />Protocols
 
@@ -926,6 +1096,8 @@ background-image: url(./img/the-physical-web.png)
 </h2>
 
 ---
+
+class: fixed-width-list
 
 ## IoT Platforms
 
@@ -983,6 +1155,8 @@ background-image: url(./img/nest-thermostat.jpg)
 
 ---
 
+class: fixed-width-list
+
 ## Real-Time Experiences Even More Essential
 
 * Data
@@ -990,7 +1164,7 @@ background-image: url(./img/nest-thermostat.jpg)
 
 ---
 
-class: top
+class: top fixed-width-list
 
 ## Real-Time Use Case Evolution
 
@@ -1017,20 +1191,20 @@ background-image: url(./img/notifications-actions.png)
 
 ---
 
-class: bg-white trans-all top bg-contain
+class: bg-white trans-h top bg-contain
 background-image: url(./img/google-now-subscriptions.jpg)
 
 ## Subscriptions
 
 ---
 
-class: bg-white trans-all top
+class: bg-white trans-h top
 background-image: url(./img/google-now.jpg)
 
 ## Event Streams
 
 ---
-class: bg-white trans-all top bg-contain
+class: bg-white trans-h top bg-contain
 background-image: url(./img/unified-uis.png)
 
 ## Unified UIs
@@ -1045,7 +1219,7 @@ Multiple devices involved in the same experience
 ---
 
 background-image: url(./img/watch_dogs_ctos.jpg)
-class: trans-all
+class: trans-h
 
 ## Watch_Dogs
 
@@ -1093,6 +1267,8 @@ class: top fixed-width-list
   * Event Streams
   
 ---
+
+class: fixed-width-list
 
 # Realtime Internet Apps ===
 # Internet of Things ===  

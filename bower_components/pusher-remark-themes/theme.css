@@ -36,14 +36,15 @@ h1, h2, h3, h4 {
   font-weight: 200;
 }
 
-
 .remark-slide-content h3 {
   font-size: 45px;
 }
 
 .remark-slide .trans-h h1,
-.remark-slide .trans-h h2 {
+.remark-slide .trans-h h2,
+.remark-slide .trans-h h3 {
   background-color: black;
+  color: white;
   padding: 20px 45px;
   border-radius: 5px;
   text-shadow:2px 2px 2px #000;
@@ -61,10 +62,9 @@ h1, h2, h3, h4 {
 }
 
 .remark-slide .bg-video video {
-  position: fixed; right: 0; bottom: 0;
+  position: fixed; left: 0; top: 0;
   min-width: 100%; min-height: 100%;
   width: auto; height: auto; z-index: -100;
-  background: url(polina.jpg) no-repeat;
   background-size: cover;
   z-index: 100;
 }
@@ -126,6 +126,8 @@ h1, h2, h3, h4 {
   font-size: 0.5em;
 }
 
+/* Backgrounds */
+
 .remark-slide-content.bg-light {
   background: -o-linear-gradient(right, #2193b0, #6dd5ed  ); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, #2193b0, #6dd5ed  ); /* For Firefox 3.6 to 15 */
@@ -165,6 +167,57 @@ h1, h2, h3, h4 {
   background-size: contain;  
 }
 
+.remark-slide-content.bg-green {
+  background: #85ebc3 !important;
+  color: white;
+}
+
+.remark-slide-content.bg-pink {
+  background: #f4065f;
+  background-color: #f4065f;
+  color: white !important;
+}
+
+.remark-slide-content.bg-pink a,
+.remark-slide-content.bg-pink a:visited  {
+  color: white !important;
+}
+
+.green-template {
+  background-color: #85ebc3 !important;
+  color: white;
+}
+
+.bg-green {
+  background: #85ebc3 !important;
+  color: white;
+}
+
+.bg-grey {
+  background: #f2f7f8 !important;
+  color: rgb(98, 104, 105);
+}
+
+.remark-slide .bg-video video {
+  height: 100%;
+}
+
+.bg-video.bg-cover video {
+  width: 100%;
+  height: auto;
+}
+
+.remark-slide .bg-video > h3 {
+  position: relative;
+  z-index: 101;
+}
+
+.underline, .underlined {
+  text-decoration: underline;
+}
+
+/* -- */
+
 .remark-slide .em-text {
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
 }
@@ -174,18 +227,9 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
-.remark-slide ul,
+.remark-slide ul, 
 .remark-slide ol {
-  text-align: left;
-  margin: auto;
-  display: inline-block;
-  font-size: 1.1em;
-}
-
-.remark-slide ul ul,
-.remark-slide ul ol {
   display: block;
-  font-size: 1em;
 }
 
 .remark-slide .block ul {
@@ -224,7 +268,7 @@ h1, h2, h3, h4 {
   background-image: url(./img/pusher-logos/pusher-slogan-dark.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 60%;
+  background-size: 20%;
   display: inline-block;
   height: 80px;
   width: 100%;
@@ -243,7 +287,17 @@ h1, h2, h3, h4 {
 }
 
 .remark-slide .bg-white {
+  color: #000;
   background-color: #ffffff;
+}
+
+.remark-slide .bg-white a,
+.remark-slide .bg-white a:visited {
+  color: #000;
+}
+
+.remark-slide .bg-white blockquote {
+  color: #fff;
 }
 
 /* Quotes */
@@ -316,6 +370,26 @@ body.big-code .remark-code {
   vertical-align: top;
 }
 
+/* Positioning */
+
+.remark-slide>.top-left {
+  vertical-align: top;
+  text-align: left;
+}
+
+.remark-slide>.top-left>h1,
+.remark-slide>.top-left>h2,
+.remark-slide>.top-left>h3,
+.remark-slide>.top-left>p,
+.remark-slide>.top-left>ol,
+.remark-slide>.top-left>ul {
+  text-align: left;
+  width: 40%;
+}
+
+.remark-slide>.top-left>ul {
+  display: inline-block;
+}
 
 /* Left/Right sections */
 
