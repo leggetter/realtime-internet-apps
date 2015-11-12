@@ -728,7 +728,6 @@ background-image: url(./img/internet-http-es-ws-msg-pubsub-evented.png)
 
 ---
 
-template: dblue
 class: trans-h, bg-cover, bottom
 background-image: url(./img/uber.jpg)
 
@@ -1014,14 +1013,14 @@ background-image: url(./img/internet-http-es-ws-msg-protocols-pubsub-rmi-ds.png)
 ## Real-Time APIs
 
 .left[
-* Campaign Monitor
 * GitHub
 * Iron.io
 * MailChimp
+* MailJet
 ]
 .right[
-* MailJet
 * PagerDuty
+* Pusher
 * SendGrid
 * Twilio
 ]
@@ -1050,36 +1049,7 @@ background-image: url(./img/iot-2020.png)
 ???
 - IDC report
 - Same report: 7.7 Billion people
-- What connected?
-- Homes, cars, kids, drones
-
----
-
-## Smart Homes
-
----
-
-class: full-video bottom trans-h
-
-<video  poster="./video/gangnam-thumb.png" width="90%" preload="none" controls muted>
-  <source src="./video/640/gangnam-node-640.mp4" type="video/mp4">
-  <source src="./video/640/gangnam-node-640.webm" type="video/webm">
-  <p>Please download and watch our <a href="./video/640gangnam-node-640.mp4">Gangnam Nodecopter Clip</a></p>
-</video>
-
-## Drones
-
-???
-
-* Amazon and Walmart are all experimenting
-* Google plans drone delivery service for 2017
-
----
-
-class: trans-h top
-background-image:url(./img/autonomous-cars.jpg)
-
-## Autonomous Cars
+- Smart Homes, cars, drones, kids
 
 ---
 
