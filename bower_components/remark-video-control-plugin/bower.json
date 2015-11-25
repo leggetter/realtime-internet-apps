@@ -1,0 +1,25 @@
+{
+  "name": "remark-video-control-plugin",
+  "main": "remark-video-control-plugin.js",
+  "authors": [
+    "leggetter <phil@leggetter.co.uk>"
+  ],
+  "description": "A plugin to add simple navigation controls to play and stop embedded videos within a remark slideshow",
+  "moduleType": [],
+  "keywords": [
+    "remark",
+    "plugin",
+    "video",
+    "controls"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.1.0"
+}

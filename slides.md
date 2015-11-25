@@ -428,6 +428,9 @@ class: full-video top trans-h
   <p>Please download and watch our <a href="./video/640/internet-high-5-machine-640.mp4">Internet ^5 clip</a></p>
 </video>
 
+--
+play_video:
+
 ???
 Russell Thomas and Syd Lawrence
 
