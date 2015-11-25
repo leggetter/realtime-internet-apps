@@ -43,11 +43,11 @@ template: white
 class: title
 
 <div style="float: left; width: 50%">
-  <h1>The Past, Present and Future of Real-Time Apps & Communications</h1>
-  <h2>FOWA Boston 2015</h2>
+  <h1>Real-Time <i>Web</i> Apps in 2015 &amp Beyond!</h1>
+  <h2>BristolJS, Nov 2015</h2>
 </div>
 
-<img src="./img/fowa-future.png" style="float: right; width: 50%" />
+<img src="./img/bristoljs.jpg" style="float: right; width: 40%" />
 
 ???
 
@@ -58,7 +58,7 @@ class: title
 template: pink
 class: top
 
-# Real-Time FOWA
+# Talks at FOWA Boston
 
 --
 .left[
@@ -77,10 +77,14 @@ class: top
 ## <span style="font-size: 1.5em; margin: 0;">Over 40%</span> talks on Real-Time
 ]
 
+???
+
+It's not since 2011/2012 that I've seen...
+
 ---
 
 class: no-overlay
-background-image: url(./img/realtime-revolution.jpg)
+background-image: url(./img/realtime-revolution-bristoljs.jpg)
 
 ???
 
@@ -93,7 +97,7 @@ background-image: url(./img/realtime-revolution.jpg)
 
 ---
 
-template: lblue
+template: dblue
 class: title
 
 * <span class="speaker">Phil @leggetter</span>
@@ -423,6 +427,9 @@ class: full-video top trans-h
   <source src="./video/640/internet-high-5-machine-640.webm" type="video/webm">
   <p>Please download and watch our <a href="./video/640/internet-high-5-machine-640.mp4">Internet ^5 clip</a></p>
 </video>
+
+--
+play_video:
 
 ???
 Russell Thomas and Syd Lawrence
@@ -1158,7 +1165,7 @@ template: dblue
 
 .right[
 * 549M MAUs
-* 10k integrations
+* 10M integrations
 * app-within-an-app model
 * taxi, order food, tickets, games etc.
 ]
@@ -1252,7 +1259,7 @@ class: fixed-width-list
 template: dblue
 class: title
 
-# The Past, Present and Future of Real-Time Apps & Communications
+# The Real-Time <i>Internet</i> in 2015 & Beyond
 
 Thanks! Feedback & Questions!
 

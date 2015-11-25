@@ -203,6 +203,7 @@
   <body>
 
     <script src="./bower_components/remark/out/remark.min.js"></script>
+    <script src="./bower_components/remark-video-control-plugin/remark-video-control-plugin.js"></script>
     <script>
       var slideshow = remark.create({
         sourceUrl: 'slides.md',
@@ -213,6 +214,7 @@
         ratio: "16:9",
         countIncrementalSlides: false
       });
+      var controller = new RemarkVideoControlPlugin(document, slideshow);
     </script>
   </body>
 </html>
