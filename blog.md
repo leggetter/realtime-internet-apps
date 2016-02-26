@@ -1,5 +1,5 @@
 
-## Real-Time Web Apps in 2015 & Beyond: FOWA Boston 2015
+## Real-Time Web Apps: Now & Beyond
 
 ## Introduction
 
