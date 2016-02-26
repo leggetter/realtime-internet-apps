@@ -42,23 +42,34 @@ class: bg-white, center, middle, black-text
 template: white
 class: title
 
-<div style="float: left; width: 50%">
-  <h1>Real-Time <i>Web</i> Apps in 2015 &amp Beyond!</h1>
-  <h2>BristolJS, Nov 2015</h2>
-</div>
+# Real-Time Communication Patterns
 
-<img src="./img/bristoljs.jpg" style="float: right; width: 40%" />
+## Phil @leggetter
+
+---
+
+class: fixed-width-list
+
+## About Me
+
+* Real-Time Tech since 2001
+* Dev Relations since 2011
+* Evangelist, Pusher 2011 - 2013
+* Evangelist, BladeRunnerJS  2013 - 2014
+* Head of Dev Relations, Pusher 2014 - 2016
 
 ???
 
-* FOWA LDN -> BOS
+---
+
+<iframe style="position: absolute; top: 0; left: 0;" width="100%" height="720" src="https://www.youtube.com/embed/_-NLmBk4CA8" frameborder="0" allowfullscreen></iframe>
 
 ---
 
 template: pink
 class: top
 
-# Talks at FOWA Boston
+# Talks at FOWA Boston 2015
 
 --
 .left[
@@ -84,7 +95,7 @@ It's not since 2011/2012 that I've seen...
 ---
 
 class: no-overlay
-background-image: url(./img/realtime-revolution-bristoljs.jpg)
+background-image: url(./img/real-time-revolution-blank.jpg)
 
 ???
 
@@ -97,51 +108,12 @@ background-image: url(./img/realtime-revolution-bristoljs.jpg)
 
 ---
 
-template: dblue
-class: title
+class: fixed-width-list
 
-* <span class="speaker">Phil @leggetter</span>
-* <span class="speaker-job-title">Head of Developer Relations</span>
-* <span class="speaker-pusher-logo"></span>
+## Overview
 
-???
-
-* Real-time since 2001
-* SDKs
-* Apps
-* Evangelism
-
----
-
-template: white
-class: bg-contain
-background-image: url(./img/pusher-white-cloud.png)
-
-???
-
----
-
-## Realtime Web Apps (Past)
-
-> The World Wide Web (www) is an information space where documents and other web resources are identified by URLs, interlinked by hypertext links, and can be accessed via the Internet
-
----
-
-## Realtime Web Apps
-
---
-
-## &#8595;
-## **s/Web/Internet**
---
-
-## &#8595;
-## Realtime Internet Apps
-
-???
-
-* Beyond web pages and Browsers
-* Beyond just HTTP and hyperlinks
+### When do we need real-time?
+### Real-Time Use Cases &rarr; Communication Patterns
 
 ---
 
@@ -151,9 +123,14 @@ template: dblue
 
 ---
 
-## Data
+class: bg-cover trans-h
+background-image: url(./img/warp-core.gif)
 
-### Is there a timely nature to the data?
+## WCaaS
+
+--
+
+### Data: Is there a timely nature to the data?
 
 ???
 - Is there a value or need to get the data quickly?
@@ -162,9 +139,14 @@ template: dblue
 
 ---
 
+class: bg-cover trans-h
+background-image: url(./img/latency.gif)
+
+--
+
 ## User Experience
 
-Is there a timely nature to the experience?
+### Is there a timely nature to the experience?
 
 ???
 - Anything with human-to-human interaction
@@ -185,211 +167,25 @@ class: fixed-width-list
 
 class: top
 
-<br /><br />
+<br />
 
-# These aren't new *Needs* or *Demands*
-
-## But...
+## These aren't new *Needs* or *Demands*
 
 --
 
-# The Internet
+## We now have the technology to meet them
 
-???
-
-But we had a constraint... The Internet
-
----
-
-background-image: url(img/internet.png)
-class: bg-contain
-
-???
-* long strived to build real-time Internet applications
-* Arrow -> Effort required to innovate
-
----
-
-background-image: url(img/plato-talkomatic.png)
-class: bg-contain
-
-???
-Talkomatic realtime Chat - created back in 1973
-
----
-
-background-image: url(img/internet-http.png)
-
-???
-
----
-
-## HTTP was better. But many wanted more.
-
----
-
-background-image: url(img/yahoo-chat.png)
-
-???
-Yahoo! Web chat. Looks like a Java Applet.
-
----
-
-background-image:url(img/reuters-kobra.png)
-class: bg-contain
-
-???
-Financial Data. Also Java.
-
----
-
-background-image: url(img/legacy-finance-web.gif)
-class: bg-contain
-
----
-
-class: fixed-width-list
-
-## HTTP wasn't enough!
-
-* HTTP - request/response paradigm
-* Keeping persistent HTTP connections alive
-* No cross-browser `XMLHttpRequest`
-* 2 connection limit
-* No browser cross origin support
-* General cross browser incompatibilities
-
-???
-
-With the browser ...
-Don't go into detail
-
----
-
-class: fixed-width-list
-
-## Hacks & Tricks
-
-* Java Applets
-* Flash
-* HTTP Hacks
-
-???
-
-* So we hacked!
-* And we continued to hack for years!
-
----
-
-template: dblue
-
-# Then Real-Time Went Mainstream
-
-???
-
----
-
-background-image: url(img/follow-magnified.png)
-class: trans-h, top
-
-# Social
-
-???
-Social Demonstrated Value:
-- Twitter
-- Facebook
-- Skype
-- Other chat solutions
-
-- Demand and Need for update to date info
-- Demand and Need for interaction
-
-- The FOLLOW & FRIEND buttons - we know who's interested.
-
----
-
-class: fixed-width-list
-
-## Technology Advancements
-
-* Memory & CPU speed and cost
-* The cloud
-* Browser standardisation & enhancements
-* Any client can use the standards
-
-???
-
----
-
-class: bg-contain
-background-image:url(img/internet-http-es-ws.png)
-
-???
-
-Close to innovation
-
----
-
-## **MASSIVE** Increase in Internet Usage
-
----
-
-class: unstyled-links top fixed-width-list
-
-## Internet Usage (per day)
-
-* **[200 billion emails][email-stat]**
 --
 
-* [7 million blog posts written][wordpress-stat]<sup>†</sup>
-* **[500 million tweets][twitter-stat]**
---
-
-* [55 million Facebook status updates][facebook-stat]
-* [5 billion Google+ +1's][googleplus-stat]
-* [60 million Instagram photos posted][instagram-stat]
-* [2 billion minutes spent on Skype][skype-stat]
-* [33 million hours of Netflix watched][netflix-stat]
-* **[200 million hours of YouTube watched](youtube-stat)**
-
-[email-stat]:http://www.radicati.com/wp/wp-content/uploads/2013/04/Email-Statistics-Report-2013-2017-Executive-Summary.pdf
-[twitter-stat]:http://abcnews.go.com/Business/twitter-ipo-filing-reveals-500-million-tweets-day/story?id=20460493
-[facebook-stat]:http://blog.kissmetrics.com/facebook-statistics/
-[googleplus-stat]:http://www.mediabistro.com/alltwitter/social-media-stats-2012_b30651
-[wordpress-stat]:http://wordpress.com/stats/posting/
-[instagram-stat]:http://instagram.com/press/
-[youtube-stat]:http://www.youtube.com/yt/press/statistics.html
-[netflix-stat]:http://blog.netflix.com/2014/01/new-isp-performance-data-for-december.html
-[skype-stat]:http://blogs.skype.com/2013/04/03/thanks-for-making-skype-a-part-of-your-daily-lives-2-billion-minutes-a-day/
-
-???
-- What are the main (work safe) uses for the Internet each day?
-- † 41.5 million posts in April = 1.38 million per day. Assuming WordPress.com have 20% of the market; 1.38 * 5 = 6.9 million posts on all blogging platforms.
+## The next step is picking the right technology
 
 ---
 
-class: bg-white
-background-image: url(./img/time-on-internet.png)
+class: top fixed-width-list
 
-???
+<br />
 
-Mary Meeker, Kliener Perkins, Internet Trends 2015
-
----
-
-template: dblue
-
-# Realtime Apps in 2015
-
-???
-We're in a great position to be able to innovate.
-So what's being built and with what?
-
----
-
-class: top padding-center-fix fixed-width-list
-
-# Realtime Apps in 2015 (Present)
+# Understanding Real-Time Communication Patterns
 
 * Real-time Use Cases
 
@@ -941,16 +737,6 @@ Whether it's...
 
 ---
 
-> I'm not sure I believe that there is such a thing as "realtime apps" any more. Apps either update instantly and smoothly, or they appear broken. I feel that "realtime" as a feature has moved down the Kano graph. It is much more of an expectation, than an "exciter".
-
-Max Williams (@maxthelion) - CEO, Pusher
-
-???
-
-One step further
-
----
-
 class: bg-contain bg-white
 background-image: url(./img/kano-model.png)
 
@@ -1017,210 +803,6 @@ background-image: url(./img/internet-http-es-ws-msg-protocols-pubsub-rmi-ds.png)
 
 ---
 
-## Real-Time APIs
-
-.left[
-* GitHub
-* Iron.io
-* MailChimp
-* MailJet
-]
-.right[
-* PagerDuty
-* Pusher
-* SendGrid
-* Twilio
-]
-  
-???
-
-* API-focused companies already do this
-* Enables expected real-time experiences
-
----
-
-class: bg-white
-background-image: url(./img/apps-with-realtime-apis.png)
-
-???
-
-Apps with real-time APIs
-
----
-
-class: trans-h
-background-image: url(./img/iot-2020.png)
-
-<h2 style="position: absolute; top: 0; right: 0; display: inline;">More "Things"!</h2>
-
-???
-- IDC report
-- Same report: 7.7 Billion people
-- Smart Homes, cars, drones, kids
-
----
-
-class: trans-h bg-cover bottom
-background-image: url(./img/the-physical-web.png)
-
-<h2 style="position: absolute; right: 1%; display: inline-block;">
-  <a style="color:white; text-decoration:none;" href="https://www.youtube.com/watch?v=1yaLPRgtlR0&feature=youtu.be">The Physical Web</a>
-</h2>
-
----
-
-template:dblue
-
-# IoT, Apps & Developers
-
----
-
-template: pink
-class: top fixed-width-list
-
-## A **thing** can be any**thing**
-
---
-
-* Sensors
-* Appliances
-* Vehicles
-* Smart Phones
-* Devices (Arduino, Electric Imp, Raspberry Pi etc.)
---
-
-* Servers
-* Browsers
-* Apps: Native, Web, running anywhere
-
----
-
-class: fixed-width-list
-
-## The Majority of code we'll write will still be for "Apps"
-
-* Configuring
-* Monitoring
-* Interacting
-* App Logic
-
----
-
-class: top fixed-width-list
-
-## Real-Time Use Case Evolution
-
-* Notifications & Signalling
-* Activity Streams
-* Data Viz & Polls
-* Chat
-* Collaboration
-* Multiplayer Games
-
-???
-
-* The use case for real-time have stayed the same for the past 5 years
-* The use cases will fundamentally remain the same, but will augment
-
----
-
-class: trans-h bg-contain bg-white top h-abs-top
-background-image: url(./img/notifications-actions.png)
-
-## Notifications/Activity Streams -> Actions
-
-<a style="position: absolute; bottom: 5%; z-index: 100000; color: black" href="https://blog.intercom.io/the-end-of-apps-as-we-know-them/">The end of apps as we know it - Intercom</a>
-
----
-
-class: bg-white trans-h top bg-contain
-background-image: url(./img/google-now-subscriptions.jpg)
-
-## Subscriptions
-
----
-
-class: bg-white trans-h top
-background-image: url(./img/google-now.jpg)
-
-## Personalised Event Streams
-
----
-class: bg-white trans-h top bg-contain
-background-image: url(./img/unified-uis.png)
-
-## Unified UIs
-
----
-
-template: dblue
-
-# Chat for Everything
-
----
-
-## WeChat
-
-<img style="float: left;" src="./img/wechat.jpg" width="40%" />
-
-.right[
-* 549M MAUs
-* 10M integrations
-* app-within-an-app model
-* taxi, order food, tickets, games etc.
-]
-
-???
-
-* We all use chat
-* Skype, HipChat, Slack and Google Hangouts
-
----
-
-class: trans-h bottom
-background-image: url(./img/slack-integration.png)
-
-## Chat Integrations
-
----
-
-## Chat "Virtual Assistants"
-
-.left[
-* Siri
-* Google Now
-]
-.right[
-* Microsoft Cortana
-* Facebook M
-]
-
----
-
-template: pink
-
-# Chat has evolved. Chat is now a platform!
-
----
-
-# Multi-Device Experiences
-
-???
-Multiple devices involved in the same experience
-
----
-
-class: full-video
-
-<iframe width="100%" height="80%" src="https://www.youtube.com/embed/1mkShXn_buA?start=1500" frameborder="0" allowfullscreen></iframe>
-
-???
-- We confine ourselves to thinking in the singular.
-- What if we think in multiples?
-- What sort of experiences and uses would that result in?
-
----
-
 class: top fixed-width-list
 
 # Summary
@@ -1229,54 +811,37 @@ class: top fixed-width-list
 * The Internet is our communications platform
 --
 
-* Easier than ever to innovate on this platform
+* Users expect real-time experiences
 --
 
-* Users expect real-time experiences
+* Choose the right communication pattern
+  * Simple Messaging
+  * PubSub
+  * Evented PubSub
+  * DataSync
+  * RMI/RPC
 --
 
 * Future:
   * Infrastructure
   * standards
-  * IoT
-  * Event streams
-  * Use case evolution
-  * Chat everywhere
-  
----
-
-class: fixed-width-list
-
-## Realtime Internet Apps === IoT
-* Web Browsers +
-* Web Servers +
-* Native Apps +
-* Devices +
-* ...
-
 ---
 
 template: dblue
 class: title
 
-# The Real-Time <i>Internet</i> in 2015 & Beyond
+# Real-Time Communication Patterns
 
 Thanks! Feedback & Questions!
 
 * <span class="speaker">Phil @leggetter</span>
-* <span class="speaker-job-title">Head of Evangelism</span>
-* <span class="speaker-pusher-logo"></span>
 
 ???
-
-My name's...
-I hope that we can help you be part of a future of real-time internet apps
 
 ---
 
 ## References 
 
-* [Pusher](https://pusher.com)
 * [These slides - leggetter.github.io/realtime-internet-apps/](http://leggetter.github.io/realtime-internet-apps/)
 * [Mary Meeker's internet trend report](file:///Users/leggetter/Downloads/Internet_Trends_2015_v3.pdf)
 * [Kano model](https://en.wikipedia.org/wiki/Kano_model)
