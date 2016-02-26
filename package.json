@@ -3,7 +3,9 @@
   "version": "3.0.0-beta",
   "description": "Slide deck for Real-Time Internet Apps",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "snyk": "^1.8.4"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-image-resize": "^0.6.0",
@@ -12,7 +14,7 @@
     "imagemin-pngquant": "^4.2.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "snyk test && echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
