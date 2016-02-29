@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="1212 238 392 365.8" style="enable-background:new 1212 238 392 365.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.66;fill:none;stroke:#5B6177;stroke-width:2;stroke-miterlimit:10;enable-background:new    ;}
+	.st2{opacity:0.66;}
+	.st3{fill:none;stroke:#052844;stroke-width:4;stroke-miterlimit:10;}
+	.st4{fill:#052844;}
+	.st5{fill:#FFFFFF;stroke:url(#SVGID_2_);stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:none;}
+	.st7{fill:none;stroke:#142A43;stroke-width:4;stroke-miterlimit:10;}
+	.st8{fill:#142A43;}
+	.st9{opacity:0.66;fill:none;stroke:#606279;stroke-width:2;stroke-miterlimit:10;enable-background:new    ;}
+	.st10{display:none;}
+	.st11{display:inline;}
+	.st12{fill:url(#SVGID_3_);}
+	.st13{display:inline;opacity:0.66;fill:none;stroke:#606279;stroke-width:2;stroke-miterlimit:10;enable-background:new    ;}
+	.st14{fill:url(#SVGID_5_);}
+	.st15{fill:url(#SVGID_6_);}
+	.st16{fill:url(#SVGID_7_);}
+	.st17{fill:url(#SVGID_8_);}
+	.st18{fill:url(#SVGID_9_);}
+	.st19{fill:url(#SVGID_10_);}
+	.st20{fill:none;stroke:url(#SVGID_11_);stroke-width:2;stroke-miterlimit:10;}
+	.st21{fill:url(#SVGID_12_);}
+	.st22{fill:url(#SVGID_13_);}
+	.st23{fill:none;stroke:#C9C8D1;stroke-width:10;stroke-miterlimit:10;}
+	.st24{fill:#FFFFFF;}
+	.st25{fill:url(#SVGID_14_);}
+	.st26{fill:url(#SVGID_15_);}
+	.st27{fill:url(#SVGID_16_);}
+	.st28{fill:url(#SVGID_17_);}
+	.st29{fill:url(#SVGID_18_);}
+</style>
+<g id="hp-product-sms_1_">
+</g>
+<g id="hp-product-voice">
+</g>
+<g id="hp-product-insight">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1299.9067" y1="420.715" x2="1499.0784" y2="420.715" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+		<stop  offset="0" style="stop-color:#44B175"/>
+		<stop  offset="1" style="stop-color:#87C590"/>
+	</linearGradient>
+	<path style="fill:none;stroke:url(#SVGID_1_);stroke-width:2;stroke-miterlimit:10;" d="M1303.8,444.5
+		c-12.4-49.7,15.7-101.3,65.3-117.3c51.8-16.8,107.4,11.6,124.2,63.4c16.8,51.7-11.6,107.4-63.4,124.2c-28.8,9.3-58.6,4.8-82.4-10"
+		/>
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1363.9701" y1="420.7342" x2="1435.0266" y2="420.7342" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+		<stop  offset="0" style="stop-color:#44B175"/>
+		<stop  offset="1" style="stop-color:#87C590"/>
+	</linearGradient>
+	<circle style="fill:url(#SVGID_2_);" cx="1399.5" cy="420.9" r="35.5"/>
+	<g class="st2">
+		<g>
+			<path class="st7" d="M1231.6,388.3c25.3-35.4,77.6-86.9,167.9-86.9c137.6,0,187,119.5,187,119.5s-49.4,119.4-187,119.4
+				c-87.3,0-139-48-165.3-83.1"/>
+			<g>
+				<polygon class="st8" points="1229.5,461.9 1240.2,454 1230.9,452.5 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="hp-product-verify">
+</g>
+<g id="hp-product-numbers">
+</g>
+<g id="hp-product-chat">
+</g>
+</svg>

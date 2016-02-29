@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-13 238 392 365.8" style="enable-background:new -13 238 392 365.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.66;fill:none;stroke:#5B6177;stroke-width:2;stroke-miterlimit:10;enable-background:new    ;}
+	.st2{opacity:0.66;}
+	.st3{fill:none;stroke:#052844;stroke-width:4;stroke-miterlimit:10;}
+	.st4{fill:#052844;}
+	.st5{fill:#FFFFFF;stroke:url(#SVGID_2_);stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:none;}
+	.st7{fill:none;stroke:#142A43;stroke-width:4;stroke-miterlimit:10;}
+	.st8{fill:#142A43;}
+	.st9{opacity:0.66;fill:none;stroke:#606279;stroke-width:2;stroke-miterlimit:10;enable-background:new    ;}
+	.st10{display:none;}
+	.st11{display:inline;}
+	.st12{fill:url(#SVGID_3_);}
+	.st13{display:inline;opacity:0.66;fill:none;stroke:#606279;stroke-width:2;stroke-miterlimit:10;enable-background:new    ;}
+	.st14{fill:url(#SVGID_5_);}
+	.st15{fill:url(#SVGID_6_);}
+	.st16{fill:url(#SVGID_7_);}
+	.st17{fill:url(#SVGID_8_);}
+	.st18{fill:url(#SVGID_9_);}
+	.st19{fill:url(#SVGID_10_);}
+	.st20{fill:none;stroke:url(#SVGID_11_);stroke-width:2;stroke-miterlimit:10;}
+	.st21{fill:url(#SVGID_12_);}
+	.st22{fill:url(#SVGID_13_);}
+	.st23{fill:none;stroke:#C9C8D1;stroke-width:10;stroke-miterlimit:10;}
+	.st24{fill:#FFFFFF;}
+	.st25{fill:url(#SVGID_14_);}
+	.st26{fill:url(#SVGID_15_);}
+	.st27{fill:url(#SVGID_16_);}
+	.st28{fill:url(#SVGID_17_);}
+	.st29{fill:url(#SVGID_18_);}
+</style>
+<g id="hp-product-sms_1_">
+	<g id="hp-product-sms">
+		<g>
+			<g>
+				
+					<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="90.1644" y1="501.5818" x2="158.1407" y2="433.6054" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+					<stop  offset="0" style="stop-color:#57A3D9"/>
+					<stop  offset="1" style="stop-color:#904DC4"/>
+				</linearGradient>
+				<path class="st0" d="M102.1,362.9c0,7.9-6.4,14.4-14.4,14.4s-14.4-6.4-14.4-14.4c0-7.9,6.4-14.4,14.4-14.4
+					S102.1,354.9,102.1,362.9z M189.3,355.4h-78.2v14.9h78.2V355.4z M159.1,392.2H73.4v14.9h85.7V392.2z"/>
+				<circle class="st1" cx="132" cy="487.7" r="11.2"/>
+				<g class="st2">
+					<g>
+						<path class="st3" d="M178.9,521.2H77.1c-16.4,0-29.8-13.4-29.8-29.8V295.1c0-16.4,13.4-29.8,29.8-29.8h109.8
+							c16.4,0,29.8,13.4,29.8,29.8v92.3"/>
+						<g>
+							<polygon class="st4" points="223.7,386.4 209.7,386.4 216.7,393.4 							"/>
+						</g>
+					</g>
+				</g>
+				
+					<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="158.4706" y1="346.9971" x2="319.7661" y2="346.9971" gradientTransform="matrix(1 0 0 -1 0 841.67)">
+					<stop  offset="0" style="stop-color:#57A3D9"/>
+					<stop  offset="1" style="stop-color:#904DC4"/>
+				</linearGradient>
+				<path class="st5" d="M303.1,539.4c9.7-13.1,15.5-29.3,15.7-46.9c0.3-44-35.2-79.9-79.2-80.1c-44-0.3-79.9,35.2-80.1,79.2
+					c-0.3,44,35.2,79.9,79.2,80.1c11.3,0.1,22-2.2,31.8-6.4l42.8,11.3L303.1,539.4z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="hp-product-voice">
+</g>
+<g id="hp-product-insight">
+</g>
+<g id="hp-product-verify">
+</g>
+<g id="hp-product-numbers">
+</g>
+<g id="hp-product-chat">
+</g>
+</svg>

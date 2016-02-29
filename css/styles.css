@@ -18,10 +18,6 @@
   width: 100% !important;
 }
 
-.pusher-circle {
-  background-color: #253941 !important;
-}
-
 .remark-slide>.topish {
   top: 20%;
 }
@@ -35,4 +31,14 @@
   position: absolute;
   bottom: 5%;
   left: 5%;
+}
+
+.remark-slide .title .speaker-nexmo-logo {
+  background-image: url(../img/nexmo/nexmo_logo_white.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20%;
+  display: inline-block;
+  height: 80px;
+  width: 100%;
 }

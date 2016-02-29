@@ -31,69 +31,32 @@ class: bg-light, center, middle
 
 ---
 
-name: white
+name: black
 layout: true
-class: bg-white, center, middle, black-text
+class: bg-black, center, middle
 
 <span class="twitter_id">@leggetter</span>
 
 ---
 
-template: white
+name: white
+layout: true
+class: bg-white, center, middle, white-text
+
+<span class="twitter_id">@leggetter</span>
+
+---
+
+template: black
 class: title
 
 <div style="float: left; width: 50%">
-  <h1>Real-Time <i>Web</i> Apps in 2015 &amp Beyond!</h1>
-  <h2>BristolJS, Nov 2015</h2>
+  <h1>The Past, Present and Future of Real-Time Apps &amp; Communications</h2>
 </div>
 
-<img src="./img/bristoljs.jpg" style="float: right; width: 40%" />
+<img src="./img/idc16.jpg" style="float: right; width: 40%" />
 
 ???
-
-* FOWA LDN -> BOS
-
----
-
-template: pink
-class: top
-
-# Talks at FOWA Boston
-
---
-.left[
-## 5 talks on Real-Time
-]
---
-.left[
-## 4 talks on IoT
-]
---
-.center[
-## 21 talks at FOWA 2105
-]
---
-.center[
-## <span style="font-size: 1.5em; margin: 0;">Over 40%</span> talks on Real-Time
-]
-
-???
-
-It's not since 2011/2012 that I've seen...
-
----
-
-class: no-overlay
-background-image: url(./img/realtime-revolution-bristoljs.jpg)
-
-???
-
-* Since 2001 -> trends
-* Current surge
-* Continued trend
-* IoT? More to it
-* Past, present & future
-* Internet is our communications platform
 
 ---
 
@@ -102,7 +65,7 @@ class: title
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Developer Relations</span>
-* <span class="speaker-pusher-logo"></span>
+* <span class="speaker-nexmo-logo"></span>
 
 ???
 
@@ -115,15 +78,32 @@ class: title
 
 template: white
 class: bg-contain
-background-image: url(./img/pusher-white-cloud.png)
+background-image: url(./img/nexmo/what-nexmo-offers.png)
 
 ???
 
 ---
 
-## Realtime Web Apps (Past)
+template: dblue
+class: fixed-width-list
+
+# Real-Time Web Apps & Communications...
+
+* **Past** - how we got here
+* **Present** - what we're doing and building now
+* **Future** - what we're going to build in the future
+
+---
+
+## Realtime Web Apps
 
 > The World Wide Web (www) is an information space where documents and other web resources are identified by URLs, interlinked by hypertext links, and can be accessed via the Internet
+
+---
+
+## Realtime Internet Apps
+
+> a global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.
 
 ---
 
@@ -151,9 +131,14 @@ template: dblue
 
 ---
 
-## Data
+class: bg-cover trans-h
+background-image: url(./img/warp-core.gif)
 
-### Is there a timely nature to the data?
+## WCaaS
+
+--
+
+### Data: Is there a timely nature to the data?
 
 ???
 - Is there a value or need to get the data quickly?
@@ -162,9 +147,12 @@ template: dblue
 
 ---
 
-## User Experience
+class: bg-cover trans-h top
+background-image: url(./img/game-latency.gif)
 
-Is there a timely nature to the experience?
+--
+
+### User Experience: Is there a timely nature to the experience?
 
 ???
 - Anything with human-to-human interaction
@@ -378,19 +366,16 @@ Mary Meeker, Kliener Perkins, Internet Trends 2015
 ---
 
 template: dblue
-
-# Realtime Apps in 2015
-
-???
-We're in a great position to be able to innovate.
-So what's being built and with what?
-
----
-
 class: top padding-center-fix fixed-width-list
 
-# Realtime Apps in 2015 (Present)
+# Realtime Apps in Now (Present)
 
+???
+
+* We're in a great position to be able to innovate.
+* So what's being built and with what?
+
+--
 * Real-time Use Cases
 
 ???
@@ -436,18 +421,6 @@ Russell Thomas and Syd Lawrence
 
 ---
 
-class: trans-h h-non-block
-
-background-image: url(./img/talky-io.png)
-
-## talky.io
-
-???
-- Uses WebRTC for audio & video
-- Needs a signal to help the two peers know about each other
-
----
-
 ## Communication Pattern:
 ### Simple Messaging
 
@@ -462,7 +435,7 @@ class: code-reveal top
 Client
 
 ```js
-var ws = new WebSocket('ws://localhost/');
+var ws = new WebSocket('wss://localhost/');
 ```
 --
 ```js
@@ -471,15 +444,8 @@ ws.onmessage = function(evt) {
 ```
 --
 ```js
-  if(data.action) {
-    // ^5  
-  }
-```
---
-```js
-  else if(data.peerId) {
-    var connectTo = data.peerId;
-  }
+  // ^5  
+  performHighFive();
 };
 ```
 --
@@ -534,11 +500,11 @@ class: top code-reveal larger-code
 Client
 
 ```js
-var client = new Client('http://localhost:8000/');
+var client = new Faye.Client('http://localhost:8000/faye');
 ```
 --
 ```js
-client.subscribe('news', function(data) {
+client.subscribe('/news', function(data) {
 ```
 --
 ```js
@@ -549,12 +515,42 @@ client.subscribe('news', function(data) {
 Server
 
 ```js
-server.publish('news', {headline: 'Pusher Rocks!'});
+server.publish('/news', {headline: 'Nexmo Rocks!'});
 ```
 
 ---
 
 background-image: url(./img/internet-http-es-ws-msg-pubsub.png)
+
+---
+
+class: em-text, trans-h, bg-contain
+background-image: url(./img/lequipe-football.png)
+
+# Data Visualizations
+
+???
+
+* Complex data partitioning
+* Mapping to data on the back-end
+* Or regions in the UI
+
+---
+
+class: bg-contain trans-h
+background-image: url(./img/lequipe-football-regions.png)
+
+???
+
+* match overview 
+* timeline events
+* overview stats
+* team lineup
+* each tab in the UI
+
+--
+
+## PubSub ... or something else?
 
 ---
 
@@ -592,21 +588,20 @@ class: long wide code-reveal top
 Client
 
 ```js
-var pusher = new Pusher(APP_KEY);
-var channel = pusher.subscribe('status');
+var status = io('/leggetter-status');
 ```
 --
 ```js
-channel.bind('created', function(data) {
+status.on('created', function (data) {
   // Add activity to UI
 });
 ```
 --
 ```js
-channel.bind('updated', function(data) {
+status.on('updated', function(data) {
   // Update activity
 });
-channel.bind('deleted', function(data) {
+status.on('deleted', function(data) {
   // Remove activity
 });
 ```
@@ -615,41 +610,15 @@ channel.bind('deleted', function(data) {
 Server
 
 ```js
-pusher.trigger('status', 'created', {text: 'PubSub Rocks!', id: 1});
+var io = require('socket.io')();
+var status = io.of('/leggetter-status');
+status.emit('created', {text: 'PubSub Rocks!', id: 1});
 ```
 --
 ```js
-pusher.trigger('status', 'updated', {text: 'Evented PubSub Rocks!', id: 1});
-pusher.trigger('status', 'deleted', {id: 1});
+status.emit('updated', {text: 'Evented PubSub Rocks!', id: 1});
+status.emit('deleted', {id: 1});
 ```
-
----
-
-class: em-text, trans-h, bg-contain
-background-image: url(./img/lequipe-football.png)
-
-# Data Visualizations
-
-???
-
-* Complex data partitioning
-* Mapping to data on the back-end
-* Or regions in the UI
-
----
-
-class: bg-contain
-background-image: url(./img/lequipe-football-regions.png)
-
-???
-
-* match overview 
-* timeline events
-* overview stats
-* team lineup
-* each tab in the UI
-* PubSub or Evented PubSub
-* Argue Evented PubSub is a better fit
 
 ---
 
@@ -718,15 +687,15 @@ client.subscribe('devexp-channel', function(data) {
 Evented PubSub
 
 ```js
-var channel = pusher.subscribe('devexp-channel');
-channel.bind('chat-message', addMessage);
-channel.bind('channel-purposed-changed', updateChannelPurpose);
+var channel = io('/devexp-channel');
+channel.on('chat-message', addMessage);
+channel.on('channel-purposed-changed', updateChannelPurpose);
 ```
 --
 ```js
-channel.bind('current-topic-changed', updateChannelTopic);
-channel.bind('user-online', userOnline);
-channel.bind('user-offline', userOffline);
+channel.on('current-topic-changed', updateChannelTopic);
+channel.on('user-online', userOnline);
+channel.on('user-offline', userOffline);
 ```
 
 ---
@@ -785,28 +754,35 @@ class: code-reveal top larger-code
 Client
 
 ```js
-var sync = new DataSync();
-
-var ref = sync.get('document-1');
+var ref = new Firebase("https://<APP>.firebaseio.com/doc1/lines");
 ```
 --
 ```js
 
-ref.on(function(val) {
-  console.log(val)
+ref.on('child_added', function(childSnapshot, prevChildKey) {
+  // code to handle new child.
 });
 ```
 --
 
 ```js
-ref.put({text: 'Hello, DataSync!'}).key('unique-key');
+ref.on('child_changed', function(childSnapshot, prevChildKey) {
+  // code to handle child data changes.
+});
 ```
 --
 
 ```js
-
-ref.path('unique-key').set(null);
+ref.on('child_removed', function(oldChildSnapshot) {
+  // code to handle child removal.
+});
 ```
+--
+
+```js
+ref.push({ 'editor_id': 'leggetter', 'text': 'Nexmo Rocks!' });
+```
+
 --
 
 Framework handles updates to other clients
@@ -823,18 +799,10 @@ Built on top of PubSub/Evented PubSub
 
 ---
 
-## Communication Pattern
-### RPC/RMI
-
-Use Cases?
-
-???
-
-I'll use the term "RMI"
-
----
-
+class: trans-h bottom
 background-image: url(img/fx-motif.png)
+
+## Complex Client/Server Interactions
 
 ???
 - Open a trade
@@ -849,12 +817,21 @@ background-image: url(img/fx-motif.png)
 
 ---
 
+## Communication Pattern
+### RPC/RMI
+
+???
+
+I'll use the term "RMI"
+
+---
+
 class: top code-reveal long
 
 Client
 
 ```js
-rmi({
+dnode({
 ```
 --
 ```js
@@ -878,7 +855,7 @@ Server
 
 ```js
 var remotes = [];
-rmi({
+dnode({
   sendMessage: function(message) {
 ```
 --
@@ -901,6 +878,8 @@ rmi({
 background-image: url(./img/internet-http-es-ws-msg-pubsub-ds-rmi.png)
 
 ---
+
+template: dblue
 
 ## Choosing a Communication Pattern
 
@@ -938,21 +917,6 @@ class: top
 ???
 
 Whether it's...
-
----
-
-> I'm not sure I believe that there is such a thing as "realtime apps" any more. Apps either update instantly and smoothly, or they appear broken. I feel that "realtime" as a feature has moved down the Kano graph. It is much more of an expectation, than an "exciter".
-
-Max Williams (@maxthelion) - CEO, Pusher
-
-???
-
-One step further
-
----
-
-class: bg-contain bg-white
-background-image: url(./img/kano-model.png)
 
 ---
 
@@ -997,9 +961,10 @@ class: fixed-width-list
 * [dNode](https://github.com/substack/dnode-protocol)
 * [EPCP](https://fanout.io/docs/protocols.html#extensible-pubsub-control-protocol-epcp)
 * [GRIP](https://fanout.io/docs/protocols.html#generic-realtime-intermediary-protocol-grip)
-* [MQTT](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html)
+* [gRPC](http://www.grpc.io/)
 ]
 .right[
+* [MQTT](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html)
 * [Pusher Protocol](https://pusher.com/docs/pusher_protocol)
 * [STOMP](https://stomp.github.io/stomp-specification-1.2.html)
 * SignalR Protocol
@@ -1020,16 +985,16 @@ background-image: url(./img/internet-http-es-ws-msg-protocols-pubsub-rmi-ds.png)
 ## Real-Time APIs
 
 .left[
+* Firebase
 * GitHub
 * Iron.io
 * MailChimp
-* MailJet
 ]
 .right[
+* MailJet
 * PagerDuty
-* Pusher
+* Nexmo
 * SendGrid
-* Twilio
 ]
   
 ???
@@ -1164,7 +1129,7 @@ template: dblue
 <img style="float: left;" src="./img/wechat.jpg" width="40%" />
 
 .right[
-* 549M MAUs
+* 600M MAUs
 * 10M integrations
 * app-within-an-app model
 * taxi, order food, tickets, games etc.
@@ -1200,24 +1165,6 @@ background-image: url(./img/slack-integration.png)
 template: pink
 
 # Chat has evolved. Chat is now a platform!
-
----
-
-# Multi-Device Experiences
-
-???
-Multiple devices involved in the same experience
-
----
-
-class: full-video
-
-<iframe width="100%" height="80%" src="https://www.youtube.com/embed/1mkShXn_buA?start=1500" frameborder="0" allowfullscreen></iframe>
-
-???
-- We confine ourselves to thinking in the singular.
-- What if we think in multiples?
-- What sort of experiences and uses would that result in?
 
 ---
 
@@ -1259,13 +1206,11 @@ class: fixed-width-list
 template: dblue
 class: title
 
-# The Real-Time <i>Internet</i> in 2015 & Beyond
-
-Thanks! Feedback & Questions!
+# The Past, Present and Future of Real-Time *Internet* Apps & Communications
 
 * <span class="speaker">Phil @leggetter</span>
-* <span class="speaker-job-title">Head of Evangelism</span>
-* <span class="speaker-pusher-logo"></span>
+* <span class="speaker-job-title">Head of Developer Relations</span>
+* <span class="speaker-nexmo-logo"></span>
 
 ???
 
@@ -1276,12 +1221,7 @@ I hope that we can help you be part of a future of real-time internet apps
 
 ## References 
 
-* [Pusher](https://pusher.com)
+* [Nexmo](https://www.nexmo.com)
 * [These slides - leggetter.github.io/realtime-internet-apps/](http://leggetter.github.io/realtime-internet-apps/)
 * [Mary Meeker's internet trend report](file:///Users/leggetter/Downloads/Internet_Trends_2015_v3.pdf)
-* [Kano model](https://en.wikipedia.org/wiki/Kano_model)
-* [DDP Protocol](https://www.meteor.com/ddp)
-* [Socket.IO protocol](https://github.com/socketio/socket.io-protocol)
-* [MQTT](http://mqtt.org/)
 * [Real-Time Web Tech Guide](www.leggetter.co.uk/real-time-web-technologies-guide/)
-* [The end of apps as we know them - Intercom](https://blog.intercom.io/the-end-of-apps-as-we-know-them/)
