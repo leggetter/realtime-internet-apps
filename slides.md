@@ -87,41 +87,11 @@ background-image: url(./img/nexmo/what-nexmo-offers.png)
 template: dblue
 class: fixed-width-list
 
-# Real-Time Web Apps & Communications...
+# Real-Time Apps & Communications...
 
 * **Past** - how we got here
 * **Present** - what we're doing and building now
 * **Future** - what we're going to build in the future
-
----
-
-## Realtime Web Apps
-
-> The World Wide Web (www) is an information space where documents and other web resources are identified by URLs, interlinked by hypertext links, and can be accessed via the Internet
-
----
-
-## Realtime Internet Apps
-
-> a global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.
-
----
-
-## Realtime Web Apps
-
---
-
-## &#8595;
-## **s/Web/Internet**
---
-
-## &#8595;
-## Realtime Internet Apps
-
-???
-
-* Beyond web pages and Browsers
-* Beyond just HTTP and hyperlinks
 
 ---
 
@@ -189,6 +159,18 @@ But we had a constraint... The Internet
 
 ---
 
+## Internet
+
+> a global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.
+
+???
+
+* Beyond web pages and Browsers
+* Beyond just HTTP and hyperlinks
+* Companies like Nexmo bridge Internet and Telephony
+
+---
+
 background-image: url(img/internet.png)
 class: bg-contain
 
@@ -236,9 +218,9 @@ class: bg-contain
 
 ---
 
-class: fixed-width-list
+class: fixed-width-list top
 
-## HTTP wasn't enough!
+## HTTP + Browsers were restrictive
 
 * HTTP - request/response paradigm
 * Keeping persistent HTTP connections alive
@@ -246,26 +228,14 @@ class: fixed-width-list
 * 2 connection limit
 * No browser cross origin support
 * General cross browser incompatibilities
+--
+
+* So we **HACKED!** Java Applets, Flash, HTTP Hacks
 
 ???
 
 With the browser ...
 Don't go into detail
-
----
-
-class: fixed-width-list
-
-## Hacks & Tricks
-
-* Java Applets
-* Flash
-* HTTP Hacks
-
-???
-
-* So we hacked!
-* And we continued to hack for years!
 
 ---
 
@@ -301,7 +271,7 @@ class: fixed-width-list
 ## Technology Advancements
 
 * Memory & CPU speed and cost
-* The cloud
+* The Cloud
 * Browser standardisation & enhancements
 * Any client can use the standards
 
@@ -330,7 +300,8 @@ class: unstyled-links top fixed-width-list
 --
 
 * [7 million blog posts written][wordpress-stat]<sup>†</sup>
-* **[500 million tweets][twitter-stat]**
+* [500 million tweets][twitter-stat]
+* **[30 billion WhatsApp messages](http://www.techcityuk.com/blog/2015/10/startup-guide-to-cloud-communications/)**
 --
 
 * [55 million Facebook status updates][facebook-stat]
@@ -338,7 +309,7 @@ class: unstyled-links top fixed-width-list
 * [60 million Instagram photos posted][instagram-stat]
 * [2 billion minutes spent on Skype][skype-stat]
 * [33 million hours of Netflix watched][netflix-stat]
-* **[200 million hours of YouTube watched](youtube-stat)**
+* **[750 million hours of YouTube watched][youtube-stat]**
 
 [email-stat]:http://www.radicati.com/wp/wp-content/uploads/2013/04/Email-Statistics-Report-2013-2017-Executive-Summary.pdf
 [twitter-stat]:http://abcnews.go.com/Business/twitter-ipo-filing-reveals-500-million-tweets-day/story?id=20460493
@@ -346,13 +317,14 @@ class: unstyled-links top fixed-width-list
 [googleplus-stat]:http://www.mediabistro.com/alltwitter/social-media-stats-2012_b30651
 [wordpress-stat]:http://wordpress.com/stats/posting/
 [instagram-stat]:http://instagram.com/press/
-[youtube-stat]:http://www.youtube.com/yt/press/statistics.html
+[youtube-stat]:http://www.statisticbrain.com/youtube-statistics/
 [netflix-stat]:http://blog.netflix.com/2014/01/new-isp-performance-data-for-december.html
 [skype-stat]:http://blogs.skype.com/2013/04/03/thanks-for-making-skype-a-part-of-your-daily-lives-2-billion-minutes-a-day/
 
 ???
 - What are the main (work safe) uses for the Internet each day?
 - † 41.5 million posts in April = 1.38 million per day. Assuming WordPress.com have 20% of the market; 1.38 * 5 = 6.9 million posts on all blogging platforms.
+- †† 3.25 billion hours each month
 
 ---
 
@@ -430,7 +402,7 @@ Russell Thomas and Syd Lawrence
 
 ---
 
-class: code-reveal top
+class: code-reveal top larger-code
 
 Client
 
@@ -583,7 +555,7 @@ background-image: url(./img/delighted-app.gif)
 
 ---
 
-class: long wide code-reveal top
+class: long wide code-reveal top larger-code
 
 Client
 
@@ -711,26 +683,14 @@ background-image: url(./img/uber.jpg)
 
 ---
 
-template: lblue
 class: trans-h, bottom
-background-image: url(./img/atom-pair.gif)
+background-image: url(./img/gdocs-collaboration.png)
 
 # Multi-User Collaboration
 
 ???
 
-* Google Apps
 * Cloud 9
-* TODO: other
-
----
-
-class: bg-contain
-
-background-image: url(./img/gdocs-collaboration.png)
-
-???
-
 * Word v GDocs workflow
 
 ---
@@ -1120,7 +1080,9 @@ background-image: url(./img/unified-uis.png)
 
 template: dblue
 
-# Chat for Everything
+# Chat & Bots for Everything
+
+*The rise of the `.ai` domain*
 
 ---
 
@@ -1194,7 +1156,8 @@ class: top fixed-width-list
 
 class: fixed-width-list
 
-## Realtime Internet Apps === IoT
+### Realtime Internet Apps & Communications<br />===<br />IoT
+
 * Web Browsers +
 * Web Servers +
 * Native Apps +
