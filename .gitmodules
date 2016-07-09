@@ -1,0 +1,3 @@
+[submodule "appscamp-2016"]
+	path = appscamp-2016
+	url = https://github.com/leggetter/realtime-internet-apps.git
