@@ -33,7 +33,7 @@ class: bg-light, center, middle
 
 name: black
 layout: true
-class: bg-black, center, middle
+class: bg-black-blue, center, middle
 
 <span class="twitter_id">@leggetter</span>
 
@@ -48,13 +48,17 @@ class: bg-white, center, middle, white-text
 ---
 
 template: black
-class: title
+class: title no-overlay bg-cover em-text top
+background-image: url(./img/new-york.jpg)
 
-<div style="float: left; width: 50%">
-  <h1>The Past, Present and Future of Real-Time Apps &amp; Communications</h2>
+<div style="float: left; width: 70%">
+  <h1>The State of Real-Time Apps</h1>
+  
+  <h2>AppsCamp 2016</h2>
+  
+  Phil @leggetter, @Nexmo
 </div>
 
-<img src="./img/idc16.jpg" style="float: right; width: 40%" />
 
 ???
 
@@ -65,6 +69,7 @@ class: title
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Developer Relations</span>
+* <span style="font-size: 0.8em;">leggetter@nexmo.com</span>
 * <span class="speaker-nexmo-logo"></span>
 
 ???
@@ -84,24 +89,29 @@ background-image: url(./img/nexmo/what-nexmo-offers.png)
 
 ---
 
-template: dblue
-class: fixed-width-list
+template: black
+class: fixed-width-list-wide
 
-# Real-Time Apps & Communications...
+# The State of Real-Time Apps
 
-* **Past** - how we got here
-* **Present** - what we're doing and building now
-* **Future** - what we're going to build in the future
+* Q1. Should you have real-time features in your apps?
+* Q2. What's the norm when building real-time features?     
+* Q3. What are the go-to open source solutions?
+* Q4. Where will real-time go in the future?
 
 ---
 
 template: dblue
+
+# Q1. Should you have real-time features in your apps?
+
+---
 
 # When do we need Realtime?
 
 ---
 
-class: bg-cover trans-h
+class: bg-cover trans-h top
 background-image: url(./img/warp-core.gif)
 
 ## WCaaS
@@ -131,7 +141,6 @@ background-image: url(./img/game-latency.gif)
 
 ---
 
-template: pink
 class: fixed-width-list
 
 ## Realtime is required when there's a *Need* or *Demand* for:
@@ -141,231 +150,297 @@ class: fixed-width-list
 
 ---
 
-class: top
+# Common Real-Time Use Cases
 
-<br /><br />
+???
 
-# These aren't new *Needs* or *Demands*
+* Here are some examples of apps...
 
-## But...
+---
+
+class: em-text, bg-contain, trans-h, bottom
+background-image: url(./img/twitter-notifications.gif)
+
+# Notifications & Activity Streams
+
+???
+
+Notifications
+
+* Something has happened /Changed
+* Alert - do something
+
+Activity Streams: 
+
+* a stream of activity: past & new
+* synonymous with social apps
+  * Twitter, Facebook, Google+
+  * News, Sports
+
+---
+
+class: bg-cover, em-text, trans-h, bg-white, bottom
+background-image: url(./img/lequipe-football.png)
+
+# Data Visualizations
+
+---
+
+class: bg-video, trans-h, em-text, bottom
+
+# Chat & Bots
+
+<video id="video" autoplay="true" loop="true">
+  <source src="./video/tauth_demo.mp4" type="video/mp4">
+</video>
 
 --
-
-# The Internet
-
-???
-
-But we had a constraint... The Internet
-
----
-
-## Internet
-
-> a global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.
+play_video:
 
 ???
 
-* Beyond web pages and Browsers
-* Beyond just HTTP and hyperlinks
-* Companies like Nexmo bridge Internet and Telephony
-
----
-
-background-image: url(img/internet.png)
-class: bg-contain
-
-???
-* long strived to build real-time Internet applications
-* Arrow -> Effort required to innovate
-
----
-
-background-image: url(img/plato-talkomatic.png)
-class: bg-contain
-
-???
-Talkomatic realtime Chat - created back in 1973
-
----
-
-background-image: url(img/internet-http.png)
-
-???
-
----
-
-## HTTP was better. But many wanted more.
-
----
-
-background-image: url(img/yahoo-chat.png)
-
-???
-Yahoo! Web chat. Looks like a Java Applet.
-
----
-
-background-image:url(img/reuters-kobra.png)
-class: bg-contain
-
-???
-Financial Data. Also Java.
-
----
-
-background-image: url(img/legacy-finance-web.gif)
-class: bg-contain
-
----
-
-class: fixed-width-list top
-
-## HTTP + Browsers were restrictive
-
-* HTTP - request/response paradigm
-* Keeping persistent HTTP connections alive
-* No cross-browser `XMLHttpRequest`
-* 2 connection limit
-* No browser cross origin support
-* General cross browser incompatibilities
---
-
-* So we **HACKED!** Java Applets, Flash, HTTP Hacks
-
-???
-
-With the browser ...
-Don't go into detail
-
----
-
-template: dblue
-
-# Then Real-Time Went Mainstream
-
-???
-
----
-
-background-image: url(img/follow-magnified.png)
-class: trans-h, top
-
-# Social
-
-???
-Social Demonstrated Value:
-- Twitter
-- Facebook
-- Skype
-- Other chat solutions
-
-- Demand and Need for update to date info
-- Demand and Need for interaction
-
-- The FOLLOW & FRIEND buttons - we know who's interested.
-
----
-
-class: fixed-width-list
-
-## Technology Advancements
-
-* Memory & CPU speed and cost
-* The Cloud
-* Browser standardisation & enhancements
-* Any client can use the standards
-
-???
-
----
-
-class: bg-contain
-background-image:url(img/internet-http-es-ws.png)
-
-???
-
-Close to innovation
-
----
-
-## **MASSIVE** Increase in Internet Usage
-
----
-
-class: unstyled-links top fixed-width-list
-
-## Internet Usage (per day)
-
-* **[200 billion emails][email-stat]**
---
-
-* [7 million blog posts written][wordpress-stat]<sup>†</sup>
-* [500 million tweets][twitter-stat]
-* **[30 billion WhatsApp messages](http://www.techcityuk.com/blog/2015/10/startup-guide-to-cloud-communications/)**
---
-
-* [55 million Facebook status updates][facebook-stat]
-* [5 billion Google+ +1's][googleplus-stat]
-* [60 million Instagram photos posted][instagram-stat]
-* [2 billion minutes spent on Skype][skype-stat]
-* [33 million hours of Netflix watched][netflix-stat]
-* **[750 million hours of YouTube watched][youtube-stat]**
-
-[email-stat]:http://www.radicati.com/wp/wp-content/uploads/2013/04/Email-Statistics-Report-2013-2017-Executive-Summary.pdf
-[twitter-stat]:http://abcnews.go.com/Business/twitter-ipo-filing-reveals-500-million-tweets-day/story?id=20460493
-[facebook-stat]:http://blog.kissmetrics.com/facebook-statistics/
-[googleplus-stat]:http://www.mediabistro.com/alltwitter/social-media-stats-2012_b30651
-[wordpress-stat]:http://wordpress.com/stats/posting/
-[instagram-stat]:http://instagram.com/press/
-[youtube-stat]:http://www.statisticbrain.com/youtube-statistics/
-[netflix-stat]:http://blog.netflix.com/2014/01/new-isp-performance-data-for-december.html
-[skype-stat]:http://blogs.skype.com/2013/04/03/thanks-for-making-skype-a-part-of-your-daily-lives-2-billion-minutes-a-day/
-
-???
-- What are the main (work safe) uses for the Internet each day?
-- † 41.5 million posts in April = 1.38 million per day. Assuming WordPress.com have 20% of the market; 1.38 * 5 = 6.9 million posts on all blogging platforms.
-- †† 3.25 billion hours each month
+* The 101 of realtime
+* An interactive experience
+* Real-time matters
 
 ---
 
 class: bg-white
-background-image: url(./img/time-on-internet.png)
+background-image: url(./img/messaging-apps.png)
+
+---
+
+class: trans-h, bg-cover, bottom
+background-image: url(./img/uber.jpg)
+
+# Real-Time Location Tracking
+
+---
+
+class: trans-h, bottom, bg-cover
+background-image: url(./img/gdocs-collaboration.png)
+
+# Multi-User Collaboration
 
 ???
 
-Mary Meeker, Kliener Perkins, Internet Trends 2015
+* Google Apps
+* Cloud 9
+* TODO: other
+
+---
+
+class: trans-h top
+background-image: url(./img/talky-io.png)
+
+## WebRTC Powered AV Chat
+
+---
+
+class: top
+
+<img width="20%" src="./img/facebook.png" />
+<img width="20%" src="./img/slack.png" />
+<img width="25%" src="./img/google-docs.png" />
+<img width="20%" src="./img/uber.png" />
+
+--
+
+# Users expect a real-time UX
+
+--
+
+# Without a real-time UX your app appears broken
+
+---
+
+template: pink
+class: top padding-center-fix-2h
+
+# Q1. Should everybody be adding real-time features to their apps?
+--
+
+# A1. Yes, users expect that experience.
 
 ---
 
 template: dblue
 class: top padding-center-fix fixed-width-list
 
-# Realtime Apps in Now (Present)
+# Q2. What's the norm when building real-time features?
 
 ???
 
 * We're in a great position to be able to innovate.
 * So what's being built and with what?
 
---
-* Real-time Use Cases
+---
 
-???
+class: h1-big
 
-* Look at comms pattern
-* Which use case they're best suited to
-
---
-* Application Communication Patterns
-
-???
-
-* ways that clients and servers can communicate / real-time frameworks
-* 5 different patterns
+# 7 Factors to Consider
 
 ---
 
-# Signalling
+template: black
+background-image: url(./img/ndcoslo-2016-polling.jpg)
+class: trans-h top
+
+# 1. Should you keep on polling?
+
+---
+
+class: top
+
+## Polling Calculations
+
+Scenario
+
+1. Site average of 10,000 Users
+--
+
+2. Over 1 Hour, with a 10 second polling interval
+--
+
+3. Requests from pages load + HTML, CSS, JS, Images for 10k users = 50,000
+--
+
+4. Poll requests per user/minute = (60 / 10) = 6
+--
+
+5. Poll requests per user/hour = (6 * 60) = 360
+--
+
+6. Poll requests site wide per hour = (360 * 10,000) = 3,600,000
+--
+
+
+With polling the site would need to handle **3.65 Million requests** per hour
+
+Or **50k HTTP requests + maintain 10k persistent connections**?
+
+---
+
+## Quick Win solutions
+
+.left[* Cache - clients keep polling
+* Push Proxy solutions
+  * [fanout.io](https://fanout.io)
+  * [streamdata.io](http://streamdata.io)
+]
+
+<img style="float: right; width: 50%;" src="./img/streamdata-proxy.png" />
+
+---
+
+template: dblue
+class: h1-big, bg-cover, em-text
+background-image: url(./img/falkirk-wheel.gif)
+
+# 2. Use an existing solution
+
+## Don't reinvent the wheel
+
+<small>Unless you've a unique use case</small>
+
+---
+
+class: fixed-width-list top
+
+## Why use an existing solution?
+
+* Connection fallback/upgrade hacks still required
+  * WebSocket: **91%** of connections
+  * HTTP fallback: **9%** of connections
+--
+
+* Support/Community
+--
+
+* Maintenance
+--
+
+* Future features
+--
+
+* Scaling
+
+---
+
+class: bg-white, bg-cover trans-h
+
+background-image: url(./img/real-time-tech-choices.gif)
+
+--
+
+## <a style="color:white; text-decoration: none;" href="https://j.mp/realtime-tech-guide">j.mp/realtime-tech-guide</a>
+
+---
+
+template: dblue
+class: bg-cover, trans-h, top
+background-image: url(./img/choose-a-lang.gif)
+
+# 3. Use languages you're comfortable with
+
+---
+
+## Solutions by language
+
+* **PHP**: Ratchet, dNode-php
+* **Java**: Netty, Jetty
+* **JavaScript (Node.JS)**: Faye, Socket.IO (Engine.IO), Primus.io
+* **.NET (C#)**: SignalR, XSockets
+* **Python**: Lots of options built on Tornado
+* **Ruby**: em-websocket, Faye
+* *Language agnostic*: most hosted services
+
+---
+
+template: dblue
+class: h1-big, trans-h, bg-contain
+background-image: url(./img/windows-apple-android.jpg)
+
+# 4. Client Device Support?
+
+---
+
+class: top fixed-width-list
+
+## Client Device Support
+
+* Only some have a selection of client libraries
+--
+
+* Supported connection transports
+--
+
+* How much data are you sending?
+--
+
+* SSL required on 3/4G networks
+
+---
+
+template: black
+class: h1-big top
+
+# 5. Application/Solution<br />Communication Patterns
+
+--
+
+How does the client/server &amp; client/client communicate
+
+???
+
+Let me clarify this with code.
+
+---
+
+class: trans-h bottom
+background-image: url(./img/internet-http-es-ws-msg.png)
+
+# Simple Messaging
 
 ???
 
@@ -393,26 +468,19 @@ Russell Thomas and Syd Lawrence
 
 ---
 
-## Communication Pattern:
-### Simple Messaging
+class: code-reveal top wide larger-code
 
-???
-
-* connection over which you can send a data payload
-
----
-
-class: code-reveal top larger-code
-
-Client
+#### Simple Messaging
 
 ```js
+// client
+
 var ws = new WebSocket('wss://localhost/');
 ```
 --
 ```js
 ws.onmessage = function(evt) {
-  var data = JSON.parse(evt.data);
+  // var data = JSON.parse(evt.data);
 ```
 --
 ```js
@@ -422,10 +490,11 @@ ws.onmessage = function(evt) {
 ```
 --
 
-Server
+<hr />
 
 ```js
 // server
+
 server.on('connection', function(socket){
 ```
 --
@@ -441,178 +510,133 @@ server.on('connection', function(socket){
 
 ---
 
-background-image: url(./img/internet-http-es-ws-msg.png)
+class: code-reveal top wide larger-code
 
----
-
-class: bg-contain trans-h bottom
-background-image: url(./img/itv-news-nov-2015.gif)
-
-# Notifications
-
-???
-
-Topic targeted notifications
-
-
----
-
-## Communication Pattern:
-### Publish-Subscribe (PubSub)
-
-???
-
-* messaging pattern
-* Most common communication pattern in real-time frameworks
-
----
-
-class: top code-reveal larger-code
-
-Client
+#### Simple Messaging
 
 ```js
+var Nexmo = require('nexmo');
+
+var nexmo = new Nexmo({apiKey: API_KEY, apiSecret: API_SECRET});
+
+// SMS
+nexmo.message.sendSms(FROM, TO, 'Hello from Nexmo!');
+            
+// Voice
+nexmo.voice.sendTTSMessage(FROM, TO, 'Hello from Nexmo!');
+```
+
+---
+
+class: trans-h bottom
+background-image: url(./img/internet-http-es-ws-msg-pubsub.png)
+
+# PubSub
+
+---
+
+class: bg-contain
+background-image: url(./img/twitter-notifications.gif)
+
+???
+
+* 2 channels
+  * leggetter status updates
+  * leggetter direct message notifications
+
+---
+
+class: code-reveal top wide larger-code
+
+#### PubSub
+
+```js
+// client
+
 var client = new Faye.Client('http://localhost:8000/faye');
 ```
 --
 ```js
-client.subscribe('/news', function(data) {
+client.subscribe('/leggetter-updates', function(data) {
 ```
 --
 ```js
-  console.log(data.headline);
+  console.log(data.text);
 });
 ```
 --
-Server
+```js
+client.subscribe('/leggetter-dm-notifications', function(data) {
+  console.log(data.count);
+});
+```
+--
+<hr />
 
 ```js
-server.publish('/news', {headline: 'Nexmo Rocks!'});
+// server
+
+server.publish('/leggetter-updates', {text: 'Hello AppsCamp!'});
+```
+--
+
+```js
+server.publish('/leggetter-dm-notifications', {count: 2});
 ```
 
 ---
 
-background-image: url(./img/internet-http-es-ws-msg-pubsub.png)
+class: bottom trans-h
+background-image: url(./img/internet-http-es-ws-msg-pubsub-evented.png)
 
----
-
-class: em-text, trans-h, bg-contain
-background-image: url(./img/lequipe-football.png)
-
-# Data Visualizations
-
-???
-
-* Complex data partitioning
-* Mapping to data on the back-end
-* Or regions in the UI
-
----
-
-class: bg-contain trans-h
-background-image: url(./img/lequipe-football-regions.png)
-
-???
-
-* match overview 
-* timeline events
-* overview stats
-* team lineup
-* each tab in the UI
-
---
-
-## PubSub ... or something else?
-
----
-
-class: bg-cover, em-text, trans-h, bottom
-background-image: url(./img/delighted-app.gif)
-
-# Activity Streams
-
-???
-
-* a stream of activity
-* things have - and are - happening
-* synonymous with social apps
-  * Twitter
-  * Facebook
-  * Google+
-  * News
-  * Sports
-  
----
-
-## Communication Pattern
-### Evented PubSub
-
-???
-
-* An improvement on PubSub
-* Used all all use cases PubSub can
-* That lends itself to the real-time "evented" web
+# Evented PubSub
 
 ---
 
 class: long wide code-reveal top larger-code
 
-Client
+#### Evented PubSub
 
 ```js
-var status = io('/leggetter-status');
+// client
+
+var updates = io('/leggetter-updates');
 ```
 --
 ```js
-status.on('created', function (data) {
+updates.on('created', function (data) {
   // Add activity to UI
 });
 ```
 --
 ```js
-status.on('updated', function(data) {
+updates.on('updated', function(data) {
   // Update activity
 });
-status.on('deleted', function(data) {
+updates.on('deleted', function(data) {
   // Remove activity
 });
 ```
 --
 
-Server
+<hr />
 
 ```js
+// server
+
 var io = require('socket.io')();
-var status = io.of('/leggetter-status');
-status.emit('created', {text: 'PubSub Rocks!', id: 1});
+var updates = io.of('/leggetter-updates');
+```
+
+--
+```js
+updates.emit('created', {text: 'PubSub Rocks!', id: 1});
 ```
 --
 ```js
-status.emit('updated', {text: 'Evented PubSub Rocks!', id: 1});
-status.emit('deleted', {id: 1});
+updates.emit('updated', {text: 'Evented PubSub Rocks!', id: 1});
+updates.emit('deleted', {id: 1});
 ```
-
----
-
-class: bg-video, bg-cover, trans-h, em-text, bottom
-
-# Chat
-
-<video id="video" autoplay="true" loop="true">
-  <source src="./img/pie.webm" type="video/webm">
-  <source src="./img/pie.mp4" type="video/mp4">
-</video>
-
-???
-
-* The 101 of realtime
-* An interactive experience
-* Real-time matters
-
----
-
-class: bg-white
-background-image: url(./img/messaging-apps.png)
 
 ---
 
@@ -625,12 +649,12 @@ background-image: url(./img/messaging-apps.png)
 ---
 
 class: bg-contain
-background-image: url(./img/slack-ui.png)
+background-image: url(./img/slack-sections.png)
 
 ---
 
 class: bg-contain
-background-image: url(./img/slack-ui-channels.png)
+background-image: url(./img/slack-sections-outlined.png)
 
 ---
 
@@ -659,62 +683,38 @@ client.subscribe('devexp-channel', function(data) {
 Evented PubSub
 
 ```js
-var channel = io('/devexp-channel');
-channel.on('chat-message', addMessage);
-channel.on('channel-purposed-changed', updateChannelPurpose);
+var devexp = io('/devexp-channel');
+devexp.on('chat-message', addMessage);
+devexp.on('channel-purposed-changed', updateChannelPurpose);
 ```
 --
 ```js
-channel.on('current-topic-changed', updateChannelTopic);
-channel.on('user-online', userOnline);
-channel.on('user-offline', userOffline);
+devexp.on('current-topic-changed', updateChannelTopic);
+devexp.on('user-online', userOnline);
+devexp.on('user-offline', userOffline);
 ```
 
 ---
 
-background-image: url(./img/internet-http-es-ws-msg-pubsub-evented.png)
+class: bottom trans-h
+background-image: url(./img/internet-http-es-ws-msg-pubsub-ds.png)
+
+# DataSync
 
 ---
 
-class: trans-h, bg-cover, bottom
-background-image: url(./img/uber.jpg)
-
-# Real-Time Location Tracking
-
----
-
-class: trans-h, bottom
 background-image: url(./img/gdocs-collaboration.png)
 
-# Multi-User Collaboration
-
-???
-
-* Cloud 9
-* Word v GDocs workflow
-
 ---
 
-class: bg-cover, trans-h, bg-white
-background-image: url(./img/lunar-landing.png)
+class: code-reveal top larger-code long wide
 
-<h3 style="position: absolute; top: 2%; right: 2%; display: inline-block";>
-  Multiplayer Games / Art
-</h3>
-
----
-
-## Communication Pattern
-### Data Synchronisation (DataSync)
-
----
-
-class: code-reveal top larger-code
-
-Client
+#### Data Sync
 
 ```js
-var ref = new Firebase("https://<APP>.firebaseio.com/doc1/lines");
+// client
+
+var ref = new Firebase("https://app.firebaseio.com/doc1/lines");
 ```
 --
 ```js
@@ -726,13 +726,16 @@ ref.on('child_added', function(childSnapshot, prevChildKey) {
 --
 
 ```js
+
 ref.on('child_changed', function(childSnapshot, prevChildKey) {
   // code to handle child data changes.
 });
+
 ```
 --
 
 ```js
+
 ref.on('child_removed', function(oldChildSnapshot) {
   // code to handle child removal.
 });
@@ -740,6 +743,7 @@ ref.on('child_removed', function(oldChildSnapshot) {
 --
 
 ```js
+
 ref.push({ 'editor_id': 'leggetter', 'text': 'Nexmo Rocks!' });
 ```
 
@@ -747,22 +751,21 @@ ref.push({ 'editor_id': 'leggetter', 'text': 'Nexmo Rocks!' });
 
 Framework handles updates to other clients
 
----
-
-background-image: url(./img/internet-http-es-ws-msg-pubsub-ds.png)
-
 ???
 
-Built on top of PubSub/Evented PubSub
-
-???
+* Manipulating collection of data
+* Not dealing with Messages
 
 ---
 
-class: trans-h bottom
-background-image: url(img/fx-motif.png)
+class: bottom trans-h
+background-image: url(./img/internet-http-es-ws-msg-pubsub-ds-rmi.png)
 
-## Complex Client/Server Interactions
+# RMI (aka RPC)
+
+---
+
+background-image: url(./img/fx-motif.png)
 
 ???
 - Open a trade
@@ -777,128 +780,376 @@ background-image: url(img/fx-motif.png)
 
 ---
 
-## Communication Pattern
-### RPC/RMI
+class: top code-reveal long wide larger-code
+
+#### RMI
+
+```js
+// client
+var chat = $.connection.chatHub;
+```
+--
+
+```js
+
+chat.client.broadcastMessage = function (name, message) {
+  // handle message
+};
+```
+--
+
+```js
+
+chat.server.send( 'me', 'hello world' );
+```
+--
+```js
+
+$.connection.hub.start(); // async
+```
+--
+<hr />
+
+```csharp
+// server
+public class ChatHub : Hub
+{
+```
+--
+
+```csharp
+  public void Send(string name, string message)
+  {
+```
+--
+
+```csharp
+    // Call the broadcastMessage method to update clients.
+    Clients.All.broadcastMessage(name, message);
+  }
+}
+```
+
+---
+
+class: bg-contain
+background-image: url(./img/internet-http-es-ws-msg-pubsub-rmi-ds.png)
+
+---
+
+class: bg-white
+background-image: url(./img/rtw-tech-decision-matrix-on-axis-v2.jpg)
+
+---
+
+class: bg-white
+background-image: url(./img/rtw-tech-decision-matrix-usecases-black-v2.png)
+
+---
+
+class: bg-white
+background-image: url(./img/rtw-tech-decision-matrix-apps-black-v2.png)
+
+???
+  
+---
+
+class: bg-white
+background-image: url(./img/rtw-tech-decision-matrix-solutions-v2.png)
+
+???
+  
+* SockJS - focus on simple connections
+* Some solutions offer PubSub and data sync
+* Dropbox - offer simple DataStore API
+* Only know a few RMI options
+* New solutions: Meteor, DerbyJS, SailsJS - maybe a new category for these?
+
+---
+
+template: black
+
+# 6. Deployment & Architecture Considerations
+
+---
+
+class: bottom
+background-image: url(./img/realtime-web-stack-tight-integration-self-hosted.png)
+
+### Self Hosted <small>(Tightly Coupled)</small>
 
 ???
 
-I'll use the term "RMI"
+* Less initial overhead - quick Integration
+* As project grows complexity increases
+* Updating request/response cycle may impact realtime functionality and vise-versa
+* Likely that the web server is handling load of both standard HTTP and realtime i.e. WebSocket, Server-Sent Events, HTTP fallbacks
+
 
 ---
 
-class: top code-reveal long
+## Self-Hosted Tightly Coupled: Pro & Cons
 
-Client
+.left[
+**Pros**
 
-```js
-dnode({
-```
---
-```js
-  newMessage: function(message) {
-    console.log(message);
-  }
-})
-```
---
-```js
-.on('remote', function(remote) {
-```
---
-```js
-  remote.sendMessage({text: 'dnode baby!'});
-});
-```
---
+* Same language
+* Simple integration
+]
 
-Server
+.right[
+**Cons**
 
-```js
-var remotes = [];
-dnode({
-  sendMessage: function(message) {
-```
---
-```js
-    remotes.forEach(function(remote) {
-      remote.newMessage(message);
-    });
-  }
-})
-```
---
-```js
-.on('remote', function(remote) {
-  remotes.push(remote);
-});
-```
+* Tightly coupled
+* Self-Scaling
+* Scaling (realtime + HTTP)
+]
+---
+
+class: bottom
+background-image: url(./img/realtime-web-stack-integration-self-hosted.png)
+
+### Self-Hosted: <small>(Loosely Coupled)</small>
 
 ---
 
-background-image: url(./img/internet-http-es-ws-msg-pubsub-ds-rmi.png)
+## Self-Hosted: + Message Queue - Pro & Cons
+
+.left[
+**Pros**
+
+* Language/runtime separation
+* Maps well to PubSub
+* Loosely coupled
+]
+
+.right[
+**Cons**
+
+* Multiple components
+* Self-scaling
+* Queue routing questions
+* In: HTTP. Out: WebSocket
+]
 
 ---
 
-template: dblue
+class: fixed-width-list
 
-## Choosing a Communication Pattern
+## Hosted Real-Time options
 
----
+* [Ably](https://ably.io)
+* [Firebase](https://firebase.com)
+* [Fanout](https://fanout.io)
+* [PubNub](https://pubnub.com)
+* [Pusher](https://pusher.com)
+* [Realtime.co](https://realtime.co)
+* [Syncano](https://www.syncano.io/)
+* [StreamData](https://streamdata.io)
 
-class: trans-h
-background-image: url(./img/rtw-tech-decision-matrix-black.png)
-
-<h3 style="position: absolute; bottom: -2%; left: 0; display: inline;">Communication Patterns</h3>
-
----
-
-class: trans-h
-
-background-image: url(./img/rtw-tech-decision-matrix-usecases-black.png)
-
-<h3 style="position: absolute; bottom: -2%; left: 0; display: inline;">Communication Patterns & Use Cases</h3>
+???
 
 ---
 
-template: pink
+class: bottom, trans-h
+background-image: url(./img/realtime-web-stack-integration-hosted-pubnub.png)
+
+### Hosted Example: PubNub
+
+---
+
+## Hosted - Pros & Cons
+
+
+.left[
+**Pros**
+
+* Simple & powerful
+* Instantly scalable
+* Managed & dedicated
+* Direct integration. No overhead.
+]
+
+.right[
+**Cons**
+
+* 3rd party reliance
+* Difficult to influence functionality
+]
+
+???
+
+* Load-balancing connections
+* Maintaining state of connections
+* Synchronising data between nodes
+* Mapping connections to users?
+* Dedicated hosted service will offer :
+  * Make things easier and faster  
+  * Reduce scaling complexities
+  * Natural loose coupling via an API
+* Where is your value?
+  * Features v Infrastructure
+  
+---
+
 class: top
 
-# Real-Time is Essential
+# Why use a hosted service?
 
+Scenario
+
+1. Site average of 10,000 Users
 --
 
-<br />
+2. Over 1 Hour, no polling
+--
 
-<img width="20%" src="./img/facebook.png" />
-<img width="20%" src="./img/uservoice.png" />
-<img width="20%" src="./img/uber.png" />
-<img width="25%" src="./img/google-docs.png" />
+3. Requests from pages load + HTML, CSS, JS, Images for 10k users = 50,000
+--
 
-???
+4. That's it! Total: 50,000
+--
 
-Whether it's...
+
+Your servers handle **50k requests per hour instead of 3.6M**
+
+You offload the polling or persistent connections to the service
+
+---
+
+template: black
+
+# 7. Self-Hosted v Hosted
+
+## "Build vs. Buy"
+
+---
+
+class: bg-cover top trans-h
+background-image: url(./img/build-vs-buy.png)
+
+## Build vs. Buy - Costs
+
+<a style="position: absolute; top: 2%;" href="https://baremetrics.com/calculator">baremetrics.com/calculator</a>
 
 ---
 
 template: pink
-class: top fixed-width-list
+class: fixed-width-list-wide top
 
-## The Internet...
+### Q2. What's the norm when building real-time features?
 --
 
-## 1. is our main **communications platform**
+### A2.  Realtime Framework Considerations
+
+1. Should you keep on polling?
+2. Use an Existing Solution
+3. Use a language you're comfortable with
+4. Do you need multiple client device support?
+5. Simple Messaging, PubSub/Evented, RMI or DataSync
+6. Architectural/deployment considerations
+7. Hosted v Self-Hosted (Build vs. Buy)
+
+---
+
+template: dblue 
+class: top
+
+### Q3. What are the go-to open source solutions?
 --
 
-## 2. is becoming our main **entertainment platform**
+class: bg-pink
+
+### A3. It depends
 --
 
-## 3. should give users **real-time experiences**
+Take a look at the real-time framework considerations.
+
+e.g.
+
+--
+
+* Node + Community + Evented PubSub = Socket.IO
+--
+
+* Ruby + Actively Maintained + PubSub = Faye
+--
+
+* .NET + MS Supported + RMI = SignalR (but look at XSockets)
+--
+
+* You use RethinkDB for your DB = Horizon
+--
+
+* etc.
 
 ---
 
 template: dblue
 
-# Future
+# Q4. Where will Real-Time go in the future?
+
+---
+
+## Communicate with Anything Connected
+
+.left[
+* Servers
+* Web
+* Desktop
+]
+.right[
+* Mobile
+  * Web
+  * Native
+  * SMS
+  * Telco Voice
+* Things
+]
+
+---
+
+template: black
+class: trans-h
+background-image: url(./img/iot-2020.png)
+
+<h2 style="position: absolute; top: 0; right: 0; display: inline;">More "Things"!</h2>
+
+???
+- IDC report
+- Same report: 7.7 Billion people
+- Smart Homes, cars, drones, kids
+
+---
+
+template: black
+class: top fixed-width-list
+
+## A **thing** can be any**thing**
+
+--
+
+* Sensors
+* Appliances
+* Vehicles
+* Smart Phones
+* Devices (Arduino, Electric Imp, Raspberry Pi etc.)
+--
+
+* Servers
+* Browsers
+* Apps: Native, Web, running anywhere
+
+---
+
+class: fixed-width-list
+
+## The Majority of code we'll write will still be for "Apps"
+
+* Configuring
+* Monitoring
+* Interacting
+* App Logic
 
 ---
 
@@ -949,12 +1200,14 @@ background-image: url(./img/internet-http-es-ws-msg-protocols-pubsub-rmi-ds.png)
 * GitHub
 * Iron.io
 * MailChimp
+* MailJet
 ]
 .right[
-* MailJet
 * PagerDuty
 * Nexmo
 * SendGrid
+* Slack
+* Uber
 ]
   
 ???
@@ -970,64 +1223,6 @@ background-image: url(./img/apps-with-realtime-apis.png)
 ???
 
 Apps with real-time APIs
-
----
-
-class: trans-h
-background-image: url(./img/iot-2020.png)
-
-<h2 style="position: absolute; top: 0; right: 0; display: inline;">More "Things"!</h2>
-
-???
-- IDC report
-- Same report: 7.7 Billion people
-- Smart Homes, cars, drones, kids
-
----
-
-class: trans-h bg-cover bottom
-background-image: url(./img/the-physical-web.png)
-
-<h2 style="position: absolute; right: 1%; display: inline-block;">
-  <a style="color:white; text-decoration:none;" href="https://www.youtube.com/watch?v=1yaLPRgtlR0&feature=youtu.be">The Physical Web</a>
-</h2>
-
----
-
-template:dblue
-
-# IoT, Apps & Developers
-
----
-
-template: pink
-class: top fixed-width-list
-
-## A **thing** can be any**thing**
-
---
-
-* Sensors
-* Appliances
-* Vehicles
-* Smart Phones
-* Devices (Arduino, Electric Imp, Raspberry Pi etc.)
---
-
-* Servers
-* Browsers
-* Apps: Native, Web, running anywhere
-
----
-
-class: fixed-width-list
-
-## The Majority of code we'll write will still be for "Apps"
-
-* Configuring
-* Monitoring
-* Interacting
-* App Logic
 
 ---
 
@@ -1078,7 +1273,7 @@ background-image: url(./img/unified-uis.png)
 
 ---
 
-template: dblue
+template: black
 
 # Chat & Bots for Everything
 
@@ -1124,8 +1319,6 @@ background-image: url(./img/slack-integration.png)
 
 ---
 
-template: pink
-
 # Chat has evolved. Chat is now a platform!
 
 ---
@@ -1135,56 +1328,44 @@ class: top fixed-width-list
 # Summary
 --
 
-* The Internet is our communications platform
+Q1. Should you have real-time features in your apps?<br />
+A1. Yes. Users expect real-time experiences.<br /><br />
+
+--
+Q2. What's the norm when building real-time features?<br />
+A2. 7 Factors to consider<br /></br>
+
+--
+Q3. What are the go-to open source solutions?<br />
+A3. It depends. See A2.<br /><br />
+
+--
+Q4. Where will real-time go in the future?<br />
 --
 
-* Easier than ever to innovate on this platform
---
-
-* Users expect real-time experiences
---
-
-* Future:
-  * Infrastructure
-  * standards
-  * IoT
-  * Event streams
-  * Use case evolution
-  * Chat everywhere
-  
----
-
-class: fixed-width-list
-
-### Realtime Internet Apps & Communications<br />===<br />IoT
-
-* Web Browsers +
-* Web Servers +
-* Native Apps +
-* Devices +
-* ...
+**A4. That's up to you!**
 
 ---
 
 template: dblue
 class: title
 
-# The Past, Present and Future of Real-Time *Internet* Apps & Communications
+# The State of Real-Time Apps
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Developer Relations</span>
+* <span style="font-size: 0.8em;">leggetter@nexmo.com</span>
 * <span class="speaker-nexmo-logo"></span>
 
 ???
 
 My name's...
-I hope that we can help you be part of a future of real-time internet apps
 
 ---
 
 ## References 
 
 * [Nexmo](https://www.nexmo.com)
-* [These slides - leggetter.github.io/realtime-internet-apps/](http://leggetter.github.io/realtime-internet-apps/)
+* [These slides - leggetter.github.io/realtime-internet-apps/appscamp-2016](http://leggetter.github.io/realtime-internet-apps/appscamp-2016)
 * [Mary Meeker's internet trend report](file:///Users/leggetter/Downloads/Internet_Trends_2015_v3.pdf)
 * [Real-Time Web Tech Guide](www.leggetter.co.uk/real-time-web-technologies-guide/)

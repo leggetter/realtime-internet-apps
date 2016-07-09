@@ -173,8 +173,8 @@ h1, h2, h3, h4 {
 }
 
 .remark-slide-content.bg-pink {
-  background: #E9820D;
-  background-color: #E9820D;
+  background: #f0537a !important;
+  background-color: #f0537a;
   color: white !important;
 }
 

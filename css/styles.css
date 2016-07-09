@@ -33,6 +33,14 @@
   left: 5%;
 }
 
+.abs-bottom-h h1,
+.abs-bottom-h h2,
+.abs-bottom-h h3,
+.abs-bottom-h h4 {
+  position: absolute;
+  bottom: -5%;
+}
+
 .remark-slide .title .speaker-nexmo-logo {
   background-image: url(../img/nexmo/nexmo_logo_white.png);
   background-repeat: no-repeat;
@@ -41,4 +49,12 @@
   display: inline-block;
   height: 80px;
   width: 100%;
+}
+
+.hide-slide-numbers .remark-slide-number {
+  display: none;
+}
+
+.hide-twitter .twitter_id {
+  display: none;
 }
